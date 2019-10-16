@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="CM Tests" parallel="false">
+    <test name="CM - Get Framework">
+        <classes>
+            <class name="Rough"/>
+        </classes>
+    </test>
+</suite>

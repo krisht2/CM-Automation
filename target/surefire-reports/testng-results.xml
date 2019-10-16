@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="CM Tests" duration-ms="40559" started-at="2019-10-07T09:49:52Z" finished-at="2019-10-07T09:50:32Z">
+    <groups>
+    </groups>
+    <test name="CM - Get Framework" duration-ms="40559" started-at="2019-10-07T09:49:52Z" finished-at="2019-10-07T09:50:32Z">
+      <class name="Rough">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Rough@7b49cea0]" name="setUp" is-config="true" duration-ms="3394" started-at="2019-10-07T09:49:52Z" finished-at="2019-10-07T09:49:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="runTest()[pri:0, instance:Rough@7b49cea0]" name="runTest" duration-ms="32571" started-at="2019-10-07T09:49:55Z" finished-at="2019-10-07T09:50:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTest -->
+        <test-method status="PASS" signature="closeTest()[pri:0, instance:Rough@7b49cea0]" name="closeTest" is-config="true" duration-ms="4575" started-at="2019-10-07T09:50:28Z" finished-at="2019-10-07T09:50:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeTest -->
+      </class> <!-- Rough -->
+    </test> <!-- CM - Get Framework -->
+  </suite> <!-- CM Tests -->
+</testng-results>
