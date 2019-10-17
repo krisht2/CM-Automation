@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="549a7836-4591-4525-b006-de0b22ede063" name="Default Changelist" comment="" />
+    <list default="true" id="549a7836-4591-4525-b006-de0b22ede063" name="Default Changelist" comment="Removed comments">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Automation_IFS_DailyReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Automation_IFS_DailyReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Comments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IFSVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IFSVue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Comments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/IFSVue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/IFSVue.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +33,13 @@
     </option>
   </component>
   <component name="ProjectId" id="1Q3smUcrruJEIg8YWmLtdC8q0Uy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="extract.method.default.visibility" value="public" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15625" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -50,7 +58,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.Comments">
+  <component name="RunManager" selected="TestNG.IFSVue">
     <configuration name="Comments" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <option name="PACKAGE_NAME" value="" />
@@ -109,9 +117,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.IFSVue" />
         <item itemvalue="TestNG.Comments" />
         <item itemvalue="TestNG.Rough" />
-        <item itemvalue="TestNG.IFSVue" />
         <item itemvalue="TestNG.ReportingDemo" />
         <item itemvalue="TestNG.ReportingDemo.verifySeleniumBlog" />
       </list>
@@ -129,5 +137,20 @@
       <updated>1567010772173</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Removed comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed comments" />
   </component>
 </project>

@@ -219,7 +219,7 @@ try {
 
     driver.quit();
 }catch (Exception e){
-    logger.log(LogStatus.ERROR,e);
+    logger.log(LogStatus.FAIL,"Error in Selenium Script: Element : \n\n"+e);
 }
             logger.getTest().setStatus(LogStatus.PASS);
             extent.endTest(logger);

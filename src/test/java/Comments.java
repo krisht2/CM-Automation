@@ -40,7 +40,6 @@ public class Comments {
                 extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 
 
-
                 //Logging preferences
                 ChromeOptions caps = new ChromeOptions();
 
@@ -109,7 +108,6 @@ public class Comments {
                 try{
                     String className = ((WebElement)elements.get(i)).getAttribute("class").toLowerCase();
                     String id = ((WebElement)elements.get(i)).getAttribute("id").toLowerCase();
-//                   if( org.apache.commons.lang3.StringUtils.containsIgnoreCase(className,"ad"));
                     if(className.equals("")&&id.equals(""));
                     else if (className.equals(" ")&&id.equals(" "));
                     else {
