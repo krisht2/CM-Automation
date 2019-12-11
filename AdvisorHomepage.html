@@ -1,0 +1,3055 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+			ExtentReports Library 2.41.1 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
+			Copyright (c) 2015, Anshoo Arora (Relevant Codes) | Copyrights licensed under the New BSD License | http://opensource.org/licenses/BSD-3-Clause
+			Documentation: http://extentreports.relevantcodes.com 
+		-->
+
+		<meta charset='UTF-8' /> 
+		<meta name='description' content='ExtentReports (by Anshoo Arora) is a reporting library for automation testing for .NET and Java. It creates detailed and beautiful HTML reports for modern browsers. ExtentReports shows test and step summary along with dashboards, system and environment details for quick analysis of your tests.' />
+		<meta name='robots' content='noodp, noydir' />
+		<meta name='viewport' content='width=device-width, initial-scale=1' />
+		<meta name='extentx' id='extentx' content='' />
+		
+		<title>
+				W3 Default Layout
+		</title>
+		
+		
+		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports/6032d73243ba4fe4fb8769eb9c315d4fdf16fe68/cdn/extent.css' type='text/css' rel='stylesheet' />
+		
+		<style>
+				
+            
+                
+            
+        
+		</style>
+	</head>
+	
+	
+	<body class='extent default dark hide-overflow'>
+		<!-- nav -->
+		<nav>
+			<div class='logo-container blue darken-2'>
+				<a class='logo-content' href='http://extentreports.relevantcodes.com'>
+					<span>ExtentReports</span>
+				</a>
+				<a href='#' data-activates='slide-out' class='button-collapse hide-on-large-only'><i class='mdi-navigation-apps'></i></a>
+			</div>
+			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+				<li class='analysis waves-effect'>
+					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
+				</li>
+			</ul>
+			<span class='report-name'>Automation Report</span> <span class='report-headline'></span>
+			<ul class='right hide-on-med-and-down nav-right'>
+				<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
+					<i class='mdi-hardware-desktop-windows'></i>
+				</li>
+				<li>
+					<span class='suite-started-time'>2019-11-06 14:25:49</span>
+				</li>
+				<li>
+					<span>v2.41.1</span>
+				</li>
+			</ul>
+		</nav>
+		<!-- /nav -->
+		
+		<!-- container -->
+		<div class='container'>
+			
+			<!-- dashboard -->
+			<div id='dashboard-view' class='row'>
+				<div class='time-totals'>
+					<div class='col l2 m4 s6'>
+						<div class='card suite-total-tests'> 
+							<span class='panel-name'>Total Tests</span> 
+							<span class='total-tests'> <span class='panel-lead'></span> </span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s6'>
+						<div class='card suite-total-steps'> 
+							<span class='panel-name'>Total Steps</span> 
+							<span class='total-steps'> <span class='panel-lead'></span> </span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s12'>
+						<div class='card suite-total-time-current'> 
+							<span class='panel-name'>Total Time Taken (Current Run)</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 3m 41s+919ms</span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s12'>
+						<div class='card suite-total-time-overall'> 
+							<span class='panel-name'>Total Time Taken (Overall)</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 3m 41s+919ms</span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s6 suite-start-time'>
+						<div class='card accent green-accent'> 
+							<span class='panel-name'>Start</span> 
+							<span class='panel-lead suite-started-time'>2019-11-06 14:22:07</span> 
+						</div> 
+					</div>
+					<div class='col l2 m4 s6 suite-end-time'>
+						<div class='card accent pink-accent'> 
+							<span class='panel-name'>End</span> 
+							<span class='panel-lead suite-ended-time'>2019-11-06 14:25:49</span> 
+						</div> 
+					</div>
+				</div>
+				<div class='charts'>
+					<div class='col s12 m6 l4 fh'> 
+						<div class='card-panel'> 
+							<div>
+								<span class='panel-name'>Tests View</span>
+							</div> 
+							<div class='panel-setting modal-trigger test-count-setting right'>
+								<a href='#test-count-setting'><i class='mdi-navigation-more-vert text-md'></i></a>
+							</div> 
+							<div class='chart-box'>
+								<canvas class='text-centered' id='test-analysis'></canvas>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='t-pass-count weight-normal'></span> test(s) passed</span>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='t-fail-count weight-normal'></span> test(s) failed, <span class='t-others-count weight-normal'></span> others</span>
+							</div> 
+						</div> 
+					</div> 
+					<div class='col s12 m6 l4 fh'> 
+						<div class='card-panel'> 
+							<div>
+								<span class='panel-name'>Steps View</span>
+							</div> 
+							<div class='panel-setting modal-trigger step-status-filter right'>
+								<a href='#step-status-filter'><i class='mdi-navigation-more-vert text-md'></i></a>
+							</div> 
+							<div class='chart-box'>
+								<canvas class='text-centered' id='step-analysis'></canvas>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='s-pass-count weight-normal'></span> step(s) passed </span>
+							</div> 
+							<div>
+								<span class='weight-light'><span class='s-fail-count weight-normal'></span> step(s) failed, <span class='s-others-count weight-normal'></span> others</span>
+							</div> 
+						</div> 
+					</div>
+					<div class='col s12 m12 l4 fh'> 
+						<div class='card-panel'> 
+							<span class='panel-name'>Pass Percentage</span> 
+							<span class='pass-percentage panel-lead'></span> 
+							<div class='progress light-blue lighten-3'> 
+								<div class='determinate light-blue'></div> 
+							</div> 
+						</div> 
+					</div>
+				</div>
+				<div class='system-view'>
+					<div class='col l4 m12 s12'>
+						<div class='card-panel'>
+							<span class='label info outline right'>Environment</span>
+							<table>
+								<thead>
+									<tr>
+										<th>Param</th>
+										<th>Value</th>
+									</tr>
+								</thead>
+								<tbody>
+										<tr>
+											<td>User Name</td>
+											<td>krish.t</td>
+										</tr>
+										<tr>
+											<td>OS</td>
+											<td>Windows 7</td>
+										</tr>
+										<tr>
+											<td>Java Version</td>
+											<td>1.8.0_221</td>
+										</tr>
+										<tr>
+											<td>Host Name</td>
+											<td>MMLDVKRISHT</td>
+										</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /dashboard -->
+			
+			<!-- tests -->
+			<div id='test-view' class='row _addedTable'>
+				<div class='col _addedCell1'>
+					<div class='contents'>
+						<div class='card-panel heading'>
+							<h5>Tests</h5>
+						</div>
+						<div class='card-panel filters'>
+							<div>
+								<a class='dropdown-button btn-floating btn-small waves-effect waves-light grey tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+									<i class='mdi-action-reorder'></i>
+								</a>
+								<ul id='tests-toggle' class='dropdown-content'>
+									<li class='pass'><a href='#!'>Pass</a></li>
+									<li class='fail'><a href='#!'>Fail</a></li>
+									<li class='skip'><a href='#!'>Skip</a></li>
+									<li class='divider'></li>
+									<li class='clear'><a href='#!'>Clear Filters</a></li>
+								</ul>
+							</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light grey' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+									<i class='mdi-navigation-close'></i>
+								</a>
+							</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light grey' id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+									<i class='mdi-action-track-changes'></i>
+								</a>
+							</div>
+							<div>
+								<a class='btn-floating btn-small waves-effect waves-light blue enabled' id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters'>
+									<i class='mdi-navigation-refresh'></i>
+								</a>
+							</div>
+							<div class='search' alt='Search Tests' title='Search Tests'>
+								<div class='input-field left'>
+									<input id='searchTests' type='text' class='validate' placeholder='Search Tests...'>
+								</div>
+								<a href="#" class='btn-floating btn-small waves-effect waves-light grey'>
+									<i class='mdi-action-search'></i>
+								</a>
+							</div>
+						</div>
+						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
+							<div class='wrapper'>
+								<ul id='test-collection' class='test-collection'>
+										<li class='collection-item test displayed active pass ' extentid='5a40e039-1bac-4b6f-ba36-e495f460d1ba'>
+											<div class='test-head'>
+												<span class='test-name'>Broken Image Checks </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:22:28</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:24</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 56s+148ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:19</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/07/gettyimages-629647243-612x612-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/06/gettyimages-862600138-612x612-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/01/budgetingwithphone-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/05/American-Express-Platinum-Card-2-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/07/FIRE-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/07/gettyimages-935859246-612x612-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/06/wells-fargo-propel.png</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/10/Bonvoy-Bold.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/10/Bonvoy_Brilliant.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/10/ink-business-preferred-credit-card.png</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:20</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/03/chase-freedom-082917.png</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:21</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/Chase-Sapphire-Card-Review-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:21</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/09/2.-Best-Balance-Transfer-CC_Banner-min-88x88.png</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:21</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/01/gettyimages-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:21</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/01/prosandcons-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:21</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/09/1.-Best-Cash-Back-CC_Banner-min-568x322.png</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:21</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/09/Best-Rewards_Article-1-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:21</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/01/x-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:21</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/01/Using-Online-Banking-Application-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:21</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/01/piggybankcreep-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/04/onlinebanking-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/01/ally_Bank_Jefferson_CheckingAcct_full-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/Americas-Best-and-Worst-Banks-2019-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/student-loan-consolidation-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/pay-more-on-student-loans-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/04/sandwichgenerationasian-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/06/gettyimages-1041287352-612x612-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/05/CreditUtilizationgettyimages-915387944-612x612-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/05/JayneBirdandfamily-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/06/gettyimages-825154794-612x612-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/Marie-Kondo-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/work-from-home-jobs-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/HSA-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/fintech-50-2019-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:22</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/buying-your-first-home-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:23</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/Buying-my-first-home-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:23</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/2019-Real-Estate-Forecast-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:23</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/05/DownPaymentGetty612x612-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:23</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/Home-Buying-Myths-88x88.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:23</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/01/How-much-home-can-i-afford-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:23</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/02/mortgage-rates-568x322.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:23</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/08/x-1100x761.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:23</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/07/Banner-Image_Sign-Up-Bonus-1100x600.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:23</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/01/onlinebudgeting-e1550082419688.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:24</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/04/millennials-money-newspaper-headlines-1100x761.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:24</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/09/9-fireblogs-1100x761.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:24</td>
+																	<td class='step-details'>Image Exists : https://www.forbes.com/advisor/wp-content/uploads/2019/08/x-1-1100x761.jpg</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='2f0e35e8-92c3-448f-ac7a-bfad9bfc938f'>
+											<div class='test-head'>
+												<span class='test-name'>PDP Checks: 0 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:24</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:28</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 4s+275ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:24</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/the-5-24-rule-how-opening-and-closing-credit-cards-can-backfire/</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='a500e8dc-63b7-4c80-98bd-d1b68ec19dae'>
+											<div class='test-head'>
+												<span class='test-name'>PDP Checks: 1 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:28</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:31</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+490ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:28</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/3-retirement-plans-for-freelancers-and-small-businesses/</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='7c813ac4-8614-4534-9860-9630f67a6b5f'>
+											<div class='test-head'>
+												<span class='test-name'>PDP Checks: 2 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:31</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:33</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+302ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:31</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/investing/the-best-money-market-mutual-funds/</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='d88d2941-a626-483d-9ac9-55c364bf5ea0'>
+											<div class='test-head'>
+												<span class='test-name'>PDP Checks: 3 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:33</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:36</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+891ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:33</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/best-budgeting-apps/</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='b78f29e7-625c-48a2-a19c-eaa03b1794a1'>
+											<div class='test-head'>
+												<span class='test-name'>PDP Checks: 4 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:36</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:38</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+167ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:36</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/reviews/american-express-platinum/</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='61fe37e1-05a4-4b41-872e-c9617fd2ef26'>
+											<div class='test-head'>
+												<span class='test-name'>PDP Checks: 5 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:38</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:40</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+63ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:38</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/the-forbes-guide-to-fire/</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='a965a384-a869-41f1-9901-9cebdc148aac'>
+											<div class='test-head'>
+												<span class='test-name'>PDP Checks: 6 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:40</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:42</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+117ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:40</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/9-family-apps-to-manage-allowance-and-chores/</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='44cd6675-188e-4256-a9e3-67714fc29aeb'>
+											<div class='test-head'>
+												<span class='test-name'>SEO TESTS : 7 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:42</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:44</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+845ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:42</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/the-5-24-rule-how-opening-and-closing-credit-cards-can-backfire/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:44</td>
+																	<td class='step-details'>Only 1 H1 Tag</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='ee91c415-1b8d-4fd0-96eb-233365d1e15f'>
+											<div class='test-head'>
+												<span class='test-name'>SEO TESTS : 1 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:44</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:46</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+948ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:44</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/3-retirement-plans-for-freelancers-and-small-businesses/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:46</td>
+																	<td class='step-details'>Only 1 H1 Tag</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='b035de7b-6344-483c-9b7f-f4db43a30d45'>
+											<div class='test-head'>
+												<span class='test-name'>SEO TESTS : 2 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:46</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:50</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 3s+733ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:46</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/investing/the-best-money-market-mutual-funds/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:50</td>
+																	<td class='step-details'>Only 1 H1 Tag</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='dd255e66-838d-41bf-a915-19a95cd15322'>
+											<div class='test-head'>
+												<span class='test-name'>SEO TESTS : 3 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:50</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:51</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+142ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:50</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/best-budgeting-apps/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:51</td>
+																	<td class='step-details'>Only 1 H1 Tag</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='c4e6a24c-5a92-4fdf-ba37-933fb7216ed0'>
+											<div class='test-head'>
+												<span class='test-name'>SEO TESTS : 4 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:51</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:52</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+357ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:51</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/reviews/american-express-platinum/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:52</td>
+																	<td class='step-details'>Only 1 H1 Tag</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='0fa33add-f457-4268-b572-46963546ae80'>
+											<div class='test-head'>
+												<span class='test-name'>SEO TESTS : 5 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:52</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:54</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+145ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:52</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/the-forbes-guide-to-fire/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:54</td>
+																	<td class='step-details'>Only 1 H1 Tag</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='2fcf1cb7-8b29-4589-bd34-e1ff019a62a7'>
+											<div class='test-head'>
+												<span class='test-name'>SEO TESTS : 6 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:54</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:23:58</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 3s+433ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:54</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/9-family-apps-to-manage-allowance-and-chores/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:23:58</td>
+																	<td class='step-details'>Only 1 H1 Tag</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='089df4f6-a9c8-4162-8b8b-685942491b8a'>
+											<div class='test-head'>
+												<span class='test-name'>Analytics Script Test : 7 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:23:58</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:00</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+933ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:23:58</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/the-5-24-rule-how-opening-and-closing-credit-cards-can-backfire/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:00</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:00</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:00</td>
+																	<td class='step-details'>UA found = UA-5883199-36</br> Expected value = UA-5883199-36</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='2e3b2454-b81e-44c1-b795-f79737c3e505'>
+											<div class='test-head'>
+												<span class='test-name'>Analytics Script Test : 1 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:00</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:02</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+35ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:00</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/3-retirement-plans-for-freelancers-and-small-businesses/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:02</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:02</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:02</td>
+																	<td class='step-details'>UA found = UA-5883199-36</br> Expected value = UA-5883199-36</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='66c31ced-b857-4b86-a4c1-7ad2e1f08480'>
+											<div class='test-head'>
+												<span class='test-name'>Analytics Script Test : 2 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:02</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:04</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+2ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:02</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/investing/the-best-money-market-mutual-funds/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:04</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:04</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:04</td>
+																	<td class='step-details'>UA found = UA-5883199-36</br> Expected value = UA-5883199-36</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='65ef6a34-7eb9-4f84-a85b-153dd8fc6357'>
+											<div class='test-head'>
+												<span class='test-name'>Analytics Script Test : 3 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:04</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:05</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+475ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:04</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/best-budgeting-apps/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:05</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:05</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:05</td>
+																	<td class='step-details'>UA found = UA-5883199-36</br> Expected value = UA-5883199-36</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='4850c899-f9d7-4181-a085-25e80f0b369d'>
+											<div class='test-head'>
+												<span class='test-name'>Analytics Script Test : 4 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:05</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:07</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+550ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:05</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/reviews/american-express-platinum/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:07</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:07</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:07</td>
+																	<td class='step-details'>UA found = UA-5883199-36</br> Expected value = UA-5883199-36</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='74471462-149c-499f-83f5-fd42c6e62bfb'>
+											<div class='test-head'>
+												<span class='test-name'>Analytics Script Test : 5 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:07</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:09</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+270ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:07</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/the-forbes-guide-to-fire/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:09</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:09</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:09</td>
+																	<td class='step-details'>UA found = UA-5883199-36</br> Expected value = UA-5883199-36</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='3fc386d5-71c8-4554-b9af-ad3edd5e1c6e'>
+											<div class='test-head'>
+												<span class='test-name'>Analytics Script Test : 6 </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:09</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:11</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 2s+270ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:09</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/9-family-apps-to-manage-allowance-and-chores/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:11</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:11</td>
+																	<td class='step-details'>GA found = GTM-PLP9KFC</br> Expected value = GTM-PLP9KFC</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:24:11</td>
+																	<td class='step-details'>UA found = UA-5883199-36</br> Expected value = UA-5883199-36</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='56092171-92eb-4cf8-a5e1-faf62bb59fda'>
+											<div class='test-head'>
+												<span class='test-name'>External link Checks: 7 </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:11</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:21</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 9s+195ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:11</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/the-5-24-rule-how-opening-and-closing-credit-cards-can-backfire/</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:19</td>
+																	<td class='step-details'>http://bit.ly/2Y2rVX8</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:19</td>
+																	<td class='step-details'>https://forbes8.forbes.com/</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:19</td>
+																	<td class='step-details'>https://admin.buysub.com/pubs/B4/FRB/16-forbes_relaunch_landingpage_2freetrial.jsp?cds_mag_code=FRB&cds_page_id=241223</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:19</td>
+																	<td class='step-details'>http://bit.ly/2YWucPR</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:19</td>
+																	<td class='step-details'>https://newsletters.editorial.forbes.com/?utm_source=forbes&utm_medium=featured&utm_campaign=navigation</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://www.myfico.com/credit-education/credit-scores/new-credit</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26658609&tid=12716_br</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26658610&tid=12716_br</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26658611&tid=12716_br</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26658968&tid=12716_br</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26658614&tid=12716_br</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26658613&tid=12716_br</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26657279&tid=12716_br</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26658612&tid=12716_br</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://thepointsguy.com/guide/ultimate-guide-chase-5-24-rule/</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01&aid=forbes_mobile01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>mailto:feedback@forbes.com</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:20</td>
+																	<td class='step-details'>http://forbesreprints.magreprints.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:21</td>
+																	<td class='step-details'>http://www.forbesmedia.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='c1f88e75-20b2-4df7-a614-62d2b6e017df'>
+											<div class='test-head'>
+												<span class='test-name'>External link Checks: 1 </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:21</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:26</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 5s+260ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:21</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/3-retirement-plans-for-freelancers-and-small-businesses/</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:25</td>
+																	<td class='step-details'>http://bit.ly/2Y2rVX8</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:25</td>
+																	<td class='step-details'>https://forbes8.forbes.com/</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:25</td>
+																	<td class='step-details'>https://admin.buysub.com/pubs/B4/FRB/16-forbes_relaunch_landingpage_2freetrial.jsp?cds_mag_code=FRB&cds_page_id=241223</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:25</td>
+																	<td class='step-details'>http://bit.ly/2YWucPR</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:25</td>
+																	<td class='step-details'>https://newsletters.editorial.forbes.com/?utm_source=forbes&utm_medium=featured&utm_campaign=navigation</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:25</td>
+																	<td class='step-details'>https://www.federalreserve.gov/publications/2018-economic-well-being-of-us-households-in-2017-employment.htm</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:25</td>
+																	<td class='step-details'>https://www.irs.gov/retirement-plans/self-employed-individuals-calculating-your-own-retirement-plan-contribution-and-deduction</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:26</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:26</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01&aid=forbes_mobile01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:26</td>
+																	<td class='step-details'>mailto:feedback@forbes.com</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:26</td>
+																	<td class='step-details'>http://forbesreprints.magreprints.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:26</td>
+																	<td class='step-details'>http://www.forbesmedia.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='7218c933-3f07-4a15-a327-fe013669f189'>
+											<div class='test-head'>
+												<span class='test-name'>External link Checks: 2 </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:26</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:33</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 6s+670ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:26</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/investing/the-best-money-market-mutual-funds/</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:30</td>
+																	<td class='step-details'>http://bit.ly/2Y2rVX8</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:30</td>
+																	<td class='step-details'>https://forbes8.forbes.com/</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:30</td>
+																	<td class='step-details'>https://admin.buysub.com/pubs/B4/FRB/16-forbes_relaunch_landingpage_2freetrial.jsp?cds_mag_code=FRB&cds_page_id=241223</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>http://bit.ly/2YWucPR</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>https://newsletters.editorial.forbes.com/?utm_source=forbes&utm_medium=featured&utm_campaign=navigation</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>https://www.investor.gov/introduction-investing/basics/investment-products/money-market-funds</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>https://www.investor.gov/introduction-investing/basics/investment-products/money-market-funds</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>https://www.fidelity.com/viewpoints/investing-ideas/getting-more-yield-on-cash</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>http://mutualfunds.com/themes/money-market-funds/</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>https://www.invesco.com/portal/site/us/investors/money-market-and-liquidity-funds/product-detail?productId=25121&title=invesco-premier-portfolio</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>https://investor.vanguard.com/mutual-funds/profile/performance/vmmxx</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>http://www.federatedinvestors.com/FII/mutualfunds/details/overview.do?fundshareid=1824&basketid=2761</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>https://www.schwabfunds.com/public/csim/home/products/mutual_funds/summary.html?symbol=SNAXX</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>https://fundresearch.fidelity.com/mutual-funds/summary/316175207</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:31</td>
+																	<td class='step-details'>https://institutional.fidelity.com/app/funds-and-products/0920/fidelity-investments-money-market-prime-money-market-portfolio-select-cl-fdixx.html</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://fundresearch.fidelity.com/mutual-funds/summary/316175405</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://www.pimco.com/en-us/investments/mutual-funds/government-money-market-fund/m</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://www.wellsfargofunds.com/ip/products/fund-profiles/overview.html?accountingId=WBC3&shareClass=Admin</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://investor.vanguard.com/mutual-funds/profile/VUSXX</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://institutional.fidelity.com/app/funds-and-products/0541/fidelity-investments-money-market-money-market-portfolio-class-ii-fcixx.html</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://investor.vanguard.com/mutual-funds/profile/VMFXX</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://institutional.fidelity.com/app/funds-and-products/0692/fidelity-investments-money-market-prime-money-market-portfolio-cl-ii-fdoxx.html</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://am.jpmorgan.com/us/en/asset-management/gim/liq/products/d/jpmorgan-prime-money-market-fund-premier-4812a2801</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://fundresearch.fidelity.com/mutual-funds/ratings/31617H201</br>Rel = no-follow</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01&aid=forbes_mobile01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>mailto:feedback@forbes.com</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:32</td>
+																	<td class='step-details'>http://forbesreprints.magreprints.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:33</td>
+																	<td class='step-details'>http://www.forbesmedia.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='d70273c5-01c7-4bcd-a73b-f2d10a30067d'>
+											<div class='test-head'>
+												<span class='test-name'>External link Checks: 3 </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:33</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:37</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 4s+231ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:33</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/best-budgeting-apps/</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>http://bit.ly/2Y2rVX8</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>https://forbes8.forbes.com/</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>https://admin.buysub.com/pubs/B4/FRB/16-forbes_relaunch_landingpage_2freetrial.jsp?cds_mag_code=FRB&cds_page_id=241223</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>http://bit.ly/2YWucPR</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>https://newsletters.editorial.forbes.com/?utm_source=forbes&utm_medium=featured&utm_campaign=navigation</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>https://www.mint.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>https://www.youneedabudget.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>https://albert.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>https://claritymoney.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>https://goodbudget.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:36</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:37</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01&aid=forbes_mobile01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:37</td>
+																	<td class='step-details'>mailto:feedback@forbes.com</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:37</td>
+																	<td class='step-details'>http://forbesreprints.magreprints.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:37</td>
+																	<td class='step-details'>http://www.forbesmedia.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='94b5de2c-4aef-4653-9b1c-afd2414f6cde'>
+											<div class='test-head'>
+												<span class='test-name'>External link Checks: 4 </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:37</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:43</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 6s+332ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:37</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/reviews/american-express-platinum/</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:40</td>
+																	<td class='step-details'>http://bit.ly/2Y2rVX8</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:40</td>
+																	<td class='step-details'>https://forbes8.forbes.com/</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:40</td>
+																	<td class='step-details'>https://admin.buysub.com/pubs/B4/FRB/16-forbes_relaunch_landingpage_2freetrial.jsp?cds_mag_code=FRB&cds_page_id=241223</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:40</td>
+																	<td class='step-details'>http://bit.ly/2YWucPR</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://newsletters.editorial.forbes.com/?utm_source=forbes&utm_medium=featured&utm_campaign=navigation</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26657509</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26656836&tid=11182_br</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26657509</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26656836&tid=11182_br</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/platinum-charge-card/26129-10-0/?print#terms-details</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26656836&tid=11182_br</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://global.americanexpress.com/rewards/calculator?mrlinknav=footer-ptsinfo</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://www.epi.org/resources/budget/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26656836&tid=11182_br</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>http://www.airspacelounge.com/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:41</td>
+																	<td class='step-details'>https://www.americanexpress.com/idc/en/benefits/the-platinum-card/global-lounge-collection.html</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/platinum-charge-card/36501-10-0/?pznOfferCode=SIZO-32QOGY-1SR3-YTI#offer-terms</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://www.americanexpress.com/us/credit-cards/card/platinum/?eep=25330&linknav=US-Acq-Shop-Consumer-VAC-Prospect-ViewCardDetail-Platinum</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://travelspecialists.americanexpress.com/cardmember-travel-benefits</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://global.americanexpress.com/entertainment/home/INVITE_ONLY?inav=menu_rewards_invitation_events</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://www.amextravel.com/featured-hotel-searches?</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://www.americanexpress.com/us/credit-cards/features-benefits/policies/purchase-protection/faq.html#1</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://www.americanexpress.com/content/dam/amex/us/credit-cards/features-benefits/policies/pdf/RP_Benefit_Guide_Rev_09-17.pdf</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26656836&tid=11182_br</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://global.americanexpress.com/faq?question=Can%20I%20revolve%20and%20pay%20charges%20later%20on%20my%20Charge%20Card?</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://www.americanexpress.com/content/dam/amex/us/staticassets/pdf/cardmember-agreements/platinum/Platinum_Card_03-31-2019.pdf</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://online.americanexpress.com/myca/lending/enroll/us/action?request_type=payovertime&srcCd=NJA</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26660389&tid=11182_br</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/gold-card/25330-10-0#FeeTable</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://cards.barclaycardus.com/banking/cards/barclaycard-arrival-plus-world-elite-mastercard/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://www.americanexpress.com/us/security-center/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:42</td>
+																	<td class='step-details'>https://www.capitalone.com/credit-cards/travel-and-miles/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:43</td>
+																	<td class='step-details'>https://oc.brcclx.com/t/?lid=26657509</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:43</td>
+																	<td class='step-details'>https://www.americanexpress.com/us/credit-cards/card-application/apply/prospect/terms/gold-card/25330-10-0#FeeTable</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:43</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:43</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01&aid=forbes_mobile01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:43</td>
+																	<td class='step-details'>mailto:feedback@forbes.com</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:43</td>
+																	<td class='step-details'>http://forbesreprints.magreprints.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:43</td>
+																	<td class='step-details'>http://www.forbesmedia.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='d8f0c553-b2e0-4d34-a1fc-97553043eb5e'>
+											<div class='test-head'>
+												<span class='test-name'>External link Checks: 5 </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:43</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:49</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 5s+670ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:43</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/the-forbes-guide-to-fire/</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>http://bit.ly/2Y2rVX8</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>https://forbes8.forbes.com/</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>https://admin.buysub.com/pubs/B4/FRB/16-forbes_relaunch_landingpage_2freetrial.jsp?cds_mag_code=FRB&cds_page_id=241223</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>http://bit.ly/2YWucPR</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>https://newsletters.editorial.forbes.com/?utm_source=forbes&utm_medium=featured&utm_campaign=navigation</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>https://www.wsj.com/articles/the-new-retirement-plan-save-almost-everything-spend-virtually-nothing-1541217688</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>https://www.bostonglobe.com/magazine/2019/06/14/meet-extreme-savers-mission-retire-early/QnsLbcFL78vXlZMPua7LfO/story.html</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>https://www.financialsamurai.com/what-is-fat-fire-best-way-to-retire-early/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>http://fireagecalc.com/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>https://www.federalreserve.gov/publications/files/2018-report-economic-well-being-us-households-201905.pdf</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:48</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01&aid=forbes_mobile01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:49</td>
+																	<td class='step-details'>mailto:feedback@forbes.com</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:49</td>
+																	<td class='step-details'>http://forbesreprints.magreprints.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:49</td>
+																	<td class='step-details'>http://www.forbesmedia.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='0e117a47-abb9-4cdc-b839-7e216ea252ad'>
+											<div class='test-head'>
+												<span class='test-name'>External link Checks: 6 </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:49</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:24:57</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 7s+826ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:49</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/9-family-apps-to-manage-allowance-and-chores/</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:53</td>
+																	<td class='step-details'>http://bit.ly/2Y2rVX8</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:53</td>
+																	<td class='step-details'>https://forbes8.forbes.com/</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://admin.buysub.com/pubs/B4/FRB/16-forbes_relaunch_landingpage_2freetrial.jsp?cds_mag_code=FRB&cds_page_id=241223</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>http://bit.ly/2YWucPR</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://newsletters.editorial.forbes.com/?utm_source=forbes&utm_medium=featured&utm_campaign=navigation</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://www.aicpa.org/press/pressreleases/2016/four-in-five-americans-say-allowance-teachesfinancial-responsibilty.html</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://busykid.com/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://stridebank.com/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://busykid.com/money-matters/investing-for-kids/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://chorecheck.com/home</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://apps.apple.com/us/app/chore-check/id986209731</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://famzoo.com/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://apps.apple.com/us/app/famzoo-family-finance/id399321476</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://play.google.com/store/apps/details?id=com.famzoo</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://www.gohenry.com/us/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:54</td>
+																	<td class='step-details'>https://apps.apple.com/us/app/gohenry-allowance-manager/id683249974</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://play.google.com/store/apps/details?id=com.pktmny.mobile</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://www.homeyapp.net/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://play.google.com/store/apps/details?id=com.homey.app&hl=en_US</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://www.amazon.com/dp/B0744JBQYN</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://apps.apple.com/us/app/homey-chores-and-allowance/id1033286805</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>http://wingboat.com/Allowance-Chores-Bot.html</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://play.google.com/store/apps/details?id=com.wingboat.AllowanceBot</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://apps.apple.com/us/app/allowance-chores-bot/id629797415</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>http://ourhomeapp.com/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://play.google.com/store/apps/details?id=com.getfairshare.ourhome</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://apps.apple.com/us/app/ourhome-chores-and-rewards/id879717020</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://www.jumpgapsoftware.com/allowance/index.html</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://apps.apple.com/us/app/iallowance-chores-allowance/id398299456</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:55</td>
+																	<td class='step-details'>https://www.roostermoney.com/us/</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:56</td>
+																	<td class='step-details'>https://play.google.com/store/apps/details?id=com.roosterbank.parent&hl=en_US</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:56</td>
+																	<td class='step-details'>https://www.amazon.com/RoosterMoney-Allowance-Manager-Piggy-Bank/dp/B01C62KBYY/ref=sr_1_1?keywords=rooster+money+allowance+manager&qid=1560805050&s=mobile-apps&sr=1-1</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:56</td>
+																	<td class='step-details'>https://apps.apple.com/us/app/roostermoney-allowance-manager/id743769885</br>Rel = noopener noreferrer</br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:56</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:56</td>
+																	<td class='step-details'>https://preferences-mgr.truste.com/?pid=forbes01&aid=forbes_mobile01</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:56</td>
+																	<td class='step-details'>mailto:feedback@forbes.com</br>Rel = </br>Target =</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:56</td>
+																	<td class='step-details'>http://forbesreprints.magreprints.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:24:57</td>
+																	<td class='step-details'>http://www.forbesmedia.com/</br>Rel = </br>Target = _blank</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='fdc42a5e-ee3e-46c7-9cdc-9e10834a775f'>
+											<div class='test-head'>
+												<span class='test-name'>DFP AD Check </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:24:57</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:25:06</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 9s+12ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:24:57</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/the-5-24-rule-how-opening-and-closing-credit-cards-can-backfire/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:02</td>
+																	<td class='step-details'>(728, 90)<br />728<br />90<br />google_ads_iframe_/7175/Advisor_0</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:03</td>
+																	<td class='step-details'>(300, 250)<br />300<br />250<br />google_ads_iframe_/7175/Advisor_1</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:04</td>
+																	<td class='step-details'>(300, 250)<br />300<br />250<br />google_ads_iframe_/7175/Advisor_2</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:05</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_3</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:06</td>
+																	<td class='step-details'>Total Ad Count = 4<br >MN Ad Count = 0<br >DFP Ad Count = 4<br >Media Credit = Getty</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='5d847813-24cc-420e-afcb-248e49253077'>
+											<div class='test-head'>
+												<span class='test-name'>DFP AD Check </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:25:06</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:25:15</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 9s+135ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:06</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/3-retirement-plans-for-freelancers-and-small-businesses/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:09</td>
+																	<td class='step-details'>(728, 90)<br />728<br />90<br />google_ads_iframe_/7175/Advisor_0</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:10</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_1</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:12</td>
+																	<td class='step-details'>(300, 250)<br />300<br />250<br />google_ads_iframe_/7175/Advisor_2</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:13</td>
+																	<td class='step-details'>(300, 250)<br />300<br />250<br />google_ads_iframe_/7175/Advisor_3</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:15</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_4</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:15</td>
+																	<td class='step-details'>Total Ad Count = 5<br >MN Ad Count = 0<br >DFP Ad Count = 5<br >Media Credit = Getty</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active fail ' extentid='7efa6557-2dd8-4178-a316-ae32933b1417'>
+											<div class='test-head'>
+												<span class='test-name'>DFP AD Check </span>
+												<span class='test-status label right outline capitalize fail'>fail</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:25:15</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:25:22</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 7s+327ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:15</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/investing/the-best-money-market-mutual-funds/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:18</td>
+																	<td class='step-details'>(728, 90)<br />728<br />90<br />google_ads_iframe_/7175/Advisor_0</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:19</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_1</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:21</td>
+																	<td class='step-details'>(300, 250)<br />300<br />250<br />google_ads_iframe_/7175/Advisor_2</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:22</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_3</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>14:25:22</td>
+																	<td class='step-details'>Error in Selenium Script : </br>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".media\-credit"}
+  (Session info: chrome=78.0.3904.87)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'MMLDVKRISHT', ip: '172.16.172.212', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\krish.t\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:62704}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f0c8d0732c5b161bd1c20500afa53080
+*** Element info: {Using=class name, value=media-credit}</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='1b7774ac-a886-43e5-8983-04e32d40d387'>
+											<div class='test-head'>
+												<span class='test-name'>DFP AD Check </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:25:22</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:25:23</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+255ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:22</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/best-budgeting-apps/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:23</td>
+																	<td class='step-details'>Total Ad Count = 0<br >MN Ad Count = 0<br >DFP Ad Count = 0<br >Media Credit = Getty</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='4a908ca0-2195-4e11-a325-bc7f84f62448'>
+											<div class='test-head'>
+												<span class='test-name'>DFP AD Check </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:25:23</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:25:25</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 1s+390ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:23</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/credit-cards/reviews/american-express-platinum/</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:25</td>
+																	<td class='step-details'>Total Ad Count = 0<br >MN Ad Count = 0<br >DFP Ad Count = 0<br >Media Credit = NO Credits on Review Page</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='57230e15-a669-4a8c-b332-3dd9f4dc7e74'>
+											<div class='test-head'>
+												<span class='test-name'>DFP AD Check </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:25:25</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:25:36</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 11s+72ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:25</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/retirement/the-forbes-guide-to-fire/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:29</td>
+																	<td class='step-details'>(728, 90)<br />728<br />90<br />google_ads_iframe_/7175/Advisor_0</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:30</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_1</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:31</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_2</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:33</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_3</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:34</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_4</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:36</td>
+																	<td class='step-details'>(300, 250)<br />300<br />250<br />google_ads_iframe_/7175/Advisor_5</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:36</td>
+																	<td class='step-details'>Total Ad Count = 6<br >MN Ad Count = 0<br >DFP Ad Count = 6<br >Media Credit = Getty</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class='collection-item test displayed active pass ' extentid='f8f7e6d4-ee95-47f5-b64d-532cbb22d7ca'>
+											<div class='test-head'>
+												<span class='test-name'>DFP AD Check </span>
+												<span class='test-status label right outline capitalize pass'>pass</span>
+												<span class='category-assigned hide '></span>
+											</div>
+											<div class='test-body'>
+												<div class='test-info'>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-11-06 14:25:36</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-11-06 14:25:48</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 11s+883ms</span>
+												</div>
+												<div class='test-desc'></div>
+												<div class='test-attributes'>
+												</div>
+												<div class='test-steps'>
+													<table class='bordered table-results'>
+														<thead>
+															<tr>
+																<th>Status</th>
+																<th>Timestamp</th>
+																<th>Details</th>
+															</tr>
+														</thead>
+														<tbody>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:36</td>
+																	<td class='step-details'>URL = https://www.forbes.com/advisor/personal-finance/9-family-apps-to-manage-allowance-and-chores/</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:41</td>
+																	<td class='step-details'>(728, 90)<br />728<br />90<br />google_ads_iframe_/7175/Advisor_0</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:42</td>
+																	<td class='step-details'>(300, 250)<br />300<br />250<br />google_ads_iframe_/7175/Advisor_1</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:43</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_2</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:45</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_3</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:46</td>
+																	<td class='step-details'>(300, 250)<br />300<br />250<br />google_ads_iframe_/7175/Advisor_4</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>14:25:48</td>
+																	<td class='step-details'>(300, 600)<br />300<br />600<br />google_ads_iframe_/7175/Advisor_5</td>
+																</tr>
+																<tr>
+																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+																	<td class='timestamp'>14:25:48</td>
+																	<td class='step-details'>Total Ad Count = 6<br >MN Ad Count = 0<br >DFP Ad Count = 6<br >Media Credit = Getty</td>
+																</tr>
+														</tbody>
+													</table>
+													<ul class='collapsible node-list' data-collapsible='accordion'>
+													</ul>
+												</div>
+											</div>
+										</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id='test-details-wrapper' class='col _addedCell2'>
+					<div class='contents'>
+						<div class='card-panel details-view'>
+							<h5 class='details-name'></h5>
+							<div class='step-filters right'>
+								<span class='btn-floating btn-small waves-effect waves-light blue' status='info' alt='info' title='info'><i class='mdi-action-info-outline'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light green' status='pass' alt='pass' title='pass'><i class='mdi-action-check-circle'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red' status='fail' alt='fail' title='fail'><i class='mdi-navigation-cancel'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red darken-4' status='fatal' alt='fatal' title='fatal'><i class='mdi-navigation-cancel'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light red lighten-2' status='error' alt='error' title='error'><i class='mdi-alert-error'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light orange' alt='warning' status='warning' title='warning'><i class='mdi-alert-warning'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light cyan' status='skip' alt='skip' title='skip'><i class='mdi-content-redo'></i></span>
+								<span class='btn-floating btn-small waves-effect waves-light grey darken-2' status='clear-step-filter' alt='Clear filters' title='Clear filters'><i class='mdi-content-clear'></i></span>
+							</div>
+							<div class='details-container'>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /tests -->
+			
+			<!-- categories -->
+			<!-- /categories -->
+			
+			<!-- exceptions -->
+			<!-- /exceptions -->
+			
+			<!-- testrunner logs -->
+			<!-- /testrunner logs -->
+			
+		</div>
+		<!-- /container -->
+		
+		<!-- test dashboard counts setting -->
+		<div id='test-count-setting' class='modal bottom-sheet'> 
+			<div class='modal-content'> 
+				<h5>Configure Tests Count Setting</h5> 
+				<input name='test-count-setting' type='radio' id='parentWithoutNodes' class='with-gap'> 
+				<label for='parentWithoutNodes'>Parent Tests Only (Does not include child nodes in counts)</label> 
+				<br> 
+				<input name='test-count-setting' type='radio' id='parentWithoutNodesAndNodes' class='with-gap'> 
+				<label for='parentWithoutNodesAndNodes'>Parent Tests Without Child Tests + Child Tests</label> 
+				<br> 
+				<input name='test-count-setting' type='radio' id='childNodes' class='with-gap'> 
+				<label for='childNodes'>Child Tests Only</label> 
+			</div> 
+			<div class='modal-footer'> 
+				<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+			</div> 
+		</div>
+		<!-- /test dashboard counts setting -->
+		
+		<!-- filter for step status -->
+		<div id='step-status-filter' class='modal bottom-sheet'> 
+			<div class='modal-content'> 
+				<h5>Select status</h5> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-pass'> 
+				<label for='step-dashboard-filter-pass'>Pass</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fail'> 
+				<label for='step-dashboard-filter-fail'>Fail</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fatal'> 
+				<label for='step-dashboard-filter-fatal'>Fatal</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-error'> 
+				<label for='step-dashboard-filter-error'>Error</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-warning'> 
+				<label for='step-dashboard-filter-warning'>Warning</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-skip'> 
+				<label for='step-dashboard-filter-skip'>Skipped</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-info'> 
+				<label for='step-dashboard-filter-info'>Info</label> 
+				<br> 
+				<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-unknown'> 
+				<label for='step-dashboard-filter-unknown'>Unknown</label> 
+			</div>
+			<div class='modal-footer'> 
+				<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+			</div> 
+		</div>
+		<!-- /filter for step status -->
+		
+		<script src='https://cdn.rawgit.com/anshooarora/extentreports/6032d73243ba4fe4fb8769eb9c315d4fdf16fe68/cdn/extent.js' type='text/javascript'></script>
+
+		<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
+		<script>
+				
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+		</script>
+	</body>
+</html>

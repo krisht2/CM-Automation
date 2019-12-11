@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="CM Tests" duration-ms="40559" started-at="2019-10-07T09:49:52Z" finished-at="2019-10-07T09:50:32Z">
+  <suite name="CM.CM Tests" duration-ms="1206782" started-at="2019-12-10T15:06:25Z" finished-at="2019-12-10T15:26:32Z">
     <groups>
     </groups>
-    <test name="CM - Get Framework" duration-ms="40559" started-at="2019-10-07T09:49:52Z" finished-at="2019-10-07T09:50:32Z">
-      <class name="Rough">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Rough@7b49cea0]" name="setUp" is-config="true" duration-ms="3394" started-at="2019-10-07T09:49:52Z" finished-at="2019-10-07T09:49:55Z">
+    <test name="CM.CM - Get Framework" duration-ms="1206782" started-at="2019-12-10T15:06:25Z" finished-at="2019-12-10T15:26:32Z">
+      <class name="Advisor.AdvisorHeader">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Advisor.AdvisorHeader@4f970963]" name="setUp" is-config="true" duration-ms="11554" started-at="2019-12-10T15:06:25Z" finished-at="2019-12-10T15:06:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="runTest()[pri:0, instance:Rough@7b49cea0]" name="runTest" duration-ms="32571" started-at="2019-10-07T09:49:55Z" finished-at="2019-10-07T09:50:28Z">
+        <test-method status="PASS" signature="advisorHeaderCheck()[pri:0, instance:Advisor.AdvisorHeader@4f970963]" name="advisorHeaderCheck" duration-ms="1194141" started-at="2019-12-10T15:06:37Z" finished-at="2019-12-10T15:26:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runTest -->
-        <test-method status="PASS" signature="closeTest()[pri:0, instance:Rough@7b49cea0]" name="closeTest" is-config="true" duration-ms="4575" started-at="2019-10-07T09:50:28Z" finished-at="2019-10-07T09:50:32Z">
+        </test-method> <!-- advisorHeaderCheck -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Advisor.AdvisorHeader@4f970963]" name="tearDown" is-config="true" duration-ms="1067" started-at="2019-12-10T15:26:31Z" finished-at="2019-12-10T15:26:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeTest -->
-      </class> <!-- Rough -->
-    </test> <!-- CM - Get Framework -->
-  </suite> <!-- CM Tests -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- Advisor.AdvisorHeader -->
+    </test> <!-- CM.CM - Get Framework -->
+  </suite> <!-- CM.CM Tests -->
 </testng-results>
