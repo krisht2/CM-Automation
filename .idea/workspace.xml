@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="549a7836-4591-4525-b006-de0b22ede063" name="Default Changelist" comment="Removed comments">
-      <change afterPath="$PROJECT_DIR$/Lighthouse.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeaderDetailed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdvisorHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/AdvisorHeader.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Lighthouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Lighthouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorHeader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorHeader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Lighthouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Lighthouse.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +55,7 @@
       <recent name="Default" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Lighthouse (1)">
+  <component name="RunManager" selected="TestNG.AdvisorHeader">
     <configuration name="AdvisorHeader" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <extension name="coverage">
@@ -124,9 +119,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AdvisorHeader" />
         <item itemvalue="TestNG.Lighthouse (1)" />
         <item itemvalue="TestNG.Lighthouse" />
-        <item itemvalue="TestNG.AdvisorHeader" />
         <item itemvalue="TestNG.Head" />
         <item itemvalue="TestNG.Head.runTest" />
       </list>

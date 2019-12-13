@@ -458,7 +458,6 @@ public class AdvisorHeader {
                 seqlogger.log(LogStatus.INFO, "Forbes List : <br />"+forb);
                 seqlogger.log(LogStatus.INFO, "Advisor List : <br />"+adv);
             }
-
         }
         extent.endTest(seqlogger);
 
@@ -470,6 +469,7 @@ public class AdvisorHeader {
         extent.endTest(seqlogger);
         extent.flush();
         extent.close();
+        window.quit();
         driver.quit();
         try {
             //if (logger.getTest().getStatus().equals(LogStatus.FAIL))
