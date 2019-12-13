@@ -2,18 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="549a7836-4591-4525-b006-de0b22ede063" name="Default Changelist" comment="Removed comments">
+      <change afterPath="$PROJECT_DIR$/Lighthouse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeaderDetailed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automation_IFS_DailyReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Automation_IFS_DailyReport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Comments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/IFSVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IFSVue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Comments.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/IFSVue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/IFSVue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AdvisorHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/AdvisorHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Lighthouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Lighthouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorHeader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorHeader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Lighthouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Lighthouse.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="quiz" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -34,7 +38,13 @@
   </component>
   <component name="ProjectId" id="1Q3smUcrruJEIg8YWmLtdC8q0Uy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="public" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15625" />
@@ -44,25 +54,23 @@
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
+      <recent name="Advisor" />
+      <recent name="CM" />
+      <recent name="IFS" />
+      <recent name="Default" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="TestNG.IFSVue">
-    <configuration name="Comments" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.Lighthouse (1)">
+    <configuration name="AdvisorHeader" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Comments" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Advisor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Advisor" />
+      <option name="MAIN_CLASS_NAME" value="Advisor.AdvisorHeader" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -70,10 +78,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IFSVue" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Head" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="IFSVue" />
+      <option name="MAIN_CLASS_NAME" value="Head" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -81,22 +89,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReportingDemo" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Head.runTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ReportingDemo" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReportingDemo.verifySeleniumBlog" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="quiz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ReportingDemo" />
-      <option name="METHOD_NAME" value="verifySeleniumBlog" />
+      <option name="MAIN_CLASS_NAME" value="Head" />
+      <option name="METHOD_NAME" value="runTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -104,10 +101,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Rough" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Lighthouse (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Lighthouse" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lighthouse" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Rough" />
+      <option name="MAIN_CLASS_NAME" value="Lighthouse" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -117,13 +124,25 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.IFSVue" />
-        <item itemvalue="TestNG.Comments" />
-        <item itemvalue="TestNG.Rough" />
-        <item itemvalue="TestNG.ReportingDemo" />
-        <item itemvalue="TestNG.ReportingDemo.verifySeleniumBlog" />
+        <item itemvalue="TestNG.Lighthouse (1)" />
+        <item itemvalue="TestNG.Lighthouse" />
+        <item itemvalue="TestNG.AdvisorHeader" />
+        <item itemvalue="TestNG.Head" />
+        <item itemvalue="TestNG.Head.runTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -141,16 +160,106 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removed comments" />
     <option name="LAST_COMMIT_MESSAGE" value="Removed comments" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1787" y="-11" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575990003579">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state x="-1787" y="-11" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1575990003579" />
+    <state x="-1738" y="45" width="403" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576062818897">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state x="-1738" y="45" width="403" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576062818897" />
+    <state x="-1880" y="-224" key="CommitChangelistDialog2" timestamp="1576055679949">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state x="-1880" y="-224" key="CommitChangelistDialog2/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576055679949" />
+    <state width="2005" height="358" key="GridCell.Tab.0.bottom" timestamp="1576167409614">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="358" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409614" />
+    <state width="1323" height="252" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575991277582" />
+    <state width="2005" height="358" key="GridCell.Tab.0.center" timestamp="1576167409614">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="358" key="GridCell.Tab.0.center/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409614" />
+    <state width="1323" height="252" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575991277581" />
+    <state width="2005" height="358" key="GridCell.Tab.0.left" timestamp="1576167409614">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="358" key="GridCell.Tab.0.left/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409614" />
+    <state width="1323" height="252" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575991277581" />
+    <state width="2005" height="358" key="GridCell.Tab.0.right" timestamp="1576167409614">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="358" key="GridCell.Tab.0.right/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409614" />
+    <state width="1323" height="252" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575991277582" />
+    <state width="2005" height="376" key="GridCell.Tab.1.bottom" timestamp="1576167409607">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="376" key="GridCell.Tab.1.bottom/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409607" />
+    <state width="2005" height="376" key="GridCell.Tab.1.center" timestamp="1576167409607">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="376" key="GridCell.Tab.1.center/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409607" />
+    <state width="2005" height="376" key="GridCell.Tab.1.left" timestamp="1576167409606">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="376" key="GridCell.Tab.1.left/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409606" />
+    <state width="2005" height="376" key="GridCell.Tab.1.right" timestamp="1576167409607">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="376" key="GridCell.Tab.1.right/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409607" />
+    <state x="-1879" y="74" key="run.anything.popup" timestamp="1576163719260">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state x="-1879" y="74" key="run.anything.popup/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576163719260" />
+    <state x="-1873" y="-127" width="672" height="678" key="search.everywhere.popup" timestamp="1576152763098">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state x="-1873" y="-127" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576152763098" />
   </component>
 </project>
