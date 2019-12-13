@@ -1,38 +1,36 @@
 package Advisor;
 
-import com.relevantcodes.extentreports.LogStatus;
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.logging.Logs;
-import org.testng.annotations.*;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-
-import org.openqa.selenium.*;
-import org.apache.commons.collections4.CollectionUtils;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.EmailAttachment;
 import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.MultiPartEmail;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-public class AdvisorHeader {
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+public class AdvisorHeaderDetailed {
 
     private WebDriver driver;
     ExtentReports extent;
     ExtentTest logger;
-    ExtentTest seqlogger;
     String extentReportFile = System.getProperty("user.dir")+"\\AdvisorHeader.html";
     String extentReportImage = System.getProperty("user.dir")+"\\extentReportImage.png";
-    ChromeOptions caps = new ChromeOptions();
-    WebDriver window;
 
     ArrayList<String> headers = new ArrayList<String>();
     ArrayList<String> submenu = new ArrayList<String>();
@@ -53,7 +51,7 @@ public class AdvisorHeader {
         extent = new ExtentReports(extentReportFile, true);
         extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
 
-
+        ChromeOptions caps = new ChromeOptions();
         //For Server
         //  caps.addArguments("--headless");
         // caps.addArguments("--no-sandbox");
@@ -253,7 +251,7 @@ public class AdvisorHeader {
             for(String h: differ2){
                 try {
                 WebElement link = driver.findElement(By.linkText(h));
-                     for(WebElement el :link.findElement(By.xpath("./../div[2]/ul/li")).findElements(By.xpath("*")))
+                     for(WebElement el :link.findElement(By.xpath("./../div[2]")).findElements(By.xpath("*")))
                      {
                          System.out.println("elements : "+el.getText());
                      }
@@ -262,9 +260,8 @@ public class AdvisorHeader {
                 a.moveToElement(link).build().perform();
                 System.out.println("Searching for "+key+" in "+h);
                     if (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).isDisplayed()) {
-                        String u = (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).getAttribute("href"));
                         System.out.println(key+" exists in : " + h);
-                        logger.log(LogStatus.WARNING,key+" ["+u+"] exists in : " + h);
+                        logger.log(LogStatus.WARNING,key+" exists in : " + h);
                         changeHeaders.add(h);
                     }
                     else
@@ -276,9 +273,8 @@ public class AdvisorHeader {
             a.moveToElement(link).build().perform();
             try{
                 if (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).isDisplayed()) {
-                    String u = (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).getAttribute("href"));
                     System.out.println(key+" exists in : Featured");
-                    logger.log(LogStatus.WARNING,key+" ["+u+"] exists in : Featured");
+                    logger.log(LogStatus.WARNING,key+" exists in : Featured");
                     changeHeaders.add("Featured");
                 }
             }
@@ -288,9 +284,8 @@ public class AdvisorHeader {
             a.moveToElement(link).build().perform();
             try{
                 if (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).isDisplayed()) {
-                    String u = (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).getAttribute("href"));
                     System.out.println(key+" exists in : More");
-                    logger.log(LogStatus.WARNING,key+" ["+u+"] exists in : More");
+                    logger.log(LogStatus.WARNING,key+" exists in : More");
                     changeHeaders.add("More");
                 }
             }
@@ -309,10 +304,8 @@ public class AdvisorHeader {
                     System.out.println("Searching for "+key+" in "+h);
                     try {
                         if (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).isDisplayed()) {
-                           String u = (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).getAttribute("href"));
                             System.out.println(key+" exists in : " + h);
-                            logger.log(LogStatus.WARNING,key+" ["+u+"] exists in : " + h);
-
+                            logger.log(LogStatus.WARNING,key+" exists in : " + h);
 
                             changeHeaders.add(h);
                         }
@@ -342,132 +335,12 @@ public class AdvisorHeader {
             else
                 logger.log(LogStatus.PASS,"No changes!!");
         extent.endTest(logger);
-        List <WebElement>forbes =  new ArrayList<>();
-        List <WebElement>advisor =  new ArrayList<>();
-        if(differ2.equals(differ)) {
-            seqlogger= extent.startTest("CHECK SEQUENCE");
-            driver.get("https://www.forbes.com");
-            window= new ChromeDriver();
-            window.manage().window().maximize();
-            window.get("https://www.forbes.com/advisor");
-            System.out.println(window.getCurrentUrl());
-            System.out.println(driver.getCurrentUrl());
-
-            boolean seq = true;
-            List <String> forb = new ArrayList<>();
-            List <String> adv = new ArrayList<>();
-            int max = forbes.size();
-            for (String h : differ2) {
-                try {
-                    forbes = driver.findElement(By.linkText(h)).findElements(By.xpath("./../div[2]/ul/li"));
-                    System.out.println(forbes.size());
-                    advisor = window.findElement(By.linkText(h)).findElements(By.xpath("./../div/ul/li"));
-                    System.out.println(advisor.size());
-                    seq = true;
-                    forb = new ArrayList<>();
-                    adv = new ArrayList<>();
-                    max = forbes.size();
-                    if (advisor.size() != forbes.size()){
-                        //seqlogger.log(LogStatus.FAIL, "Some items may have been added / Removed in this header");
-                        if (max < advisor.size())
-                            max = advisor.size();
-                    }
-                    for (int i = 0; i < max; i++) {
-                        String forbesval =forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                        String advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                        adv.add(advisorval);
-                        forb.add(forbesval);
-                        System.out.println( advisorval+" " + forbesval);
-                        if(advisorval.equalsIgnoreCase(forbesval))
-                            System.out.println("true");
-
-                        else if(forbesval.equalsIgnoreCase(("All "+h)));
-                        else {
-                            System.out.println("False!!");
-                            seq=false;
-                        }
-                    }
-                    if(seq)
-                        seqlogger.log(LogStatus.PASS,"Sequence in order : "+h);
-                    else {
-                        seqlogger.log(LogStatus.FAIL, "Sequence NOT in order : " + h);
-                        seqlogger.log(LogStatus.INFO, "Forbes List : <br />"+forb);
-                        seqlogger.log(LogStatus.INFO, "Advisor List : <br />"+adv);
-                    }
-                }
-                catch (Exception ex) {
-                    System.out.println("Could not find : " + h);
-                }
-            }
-
-            advisor = window.findElement(By.xpath(".//a[contains(text(),'Featured')]")).findElements(By.xpath("./../div/ul/li"));
-            forbes = driver.findElement(By.xpath(".//span[contains(text(),'Featured')]")).findElements(By.xpath("./../div[2]/ul/li"));
-            max = forbes.size();
-            if (advisor.size() != forbes.size()){
-                //seqlogger.log(LogStatus.FAIL, "Some items may have been added / Removed in this header");
-                if (max < advisor.size())
-                    max = advisor.size();
-            }
-            for (int i = 0; i < max; i++) {
-                String forbesval =forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                String advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                adv.add(advisorval);
-                forb.add(forbesval);
-                System.out.println( advisorval+" " + forbesval);
-                if(advisorval.equalsIgnoreCase(forbesval))
-                    System.out.println("true");
-                else {
-                    System.out.println("False!!");
-                    seq=false;
-                }
-            }
-            if(seq)
-                seqlogger.log(LogStatus.PASS,"Sequence in order : Featured");
-            else {
-                seqlogger.log(LogStatus.FAIL, "Sequence NOT in order : Featured");
-                seqlogger.log(LogStatus.INFO, "Forbes List : <br />"+forb);
-                seqlogger.log(LogStatus.INFO, "Advisor List : <br />"+adv);
-            }
-
-
-            advisor = window.findElement(By.xpath(".//a[contains(text(),'More')]")).findElements(By.xpath("./../div/ul/li"));
-            forbes = driver.findElement(By.xpath(".//span[contains(text(),'More')]")).findElements(By.xpath("./../div[2]/ul/li"));
-            max = forbes.size();
-            if (advisor.size() != forbes.size()){
-                //seqlogger.log(LogStatus.FAIL, "Some items may have been added / Removed in this header");
-                if (max < advisor.size())
-                    max = advisor.size();
-            }
-            for (int i = 0; i < max; i++) {
-                String forbesval =forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                String advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                adv.add(advisorval);
-                forb.add(forbesval);
-                System.out.println( advisorval+" " + forbesval);
-                if(advisorval.equalsIgnoreCase(forbesval))
-                    System.out.println("true");
-                else {
-                    System.out.println("False!!");
-                    seq=false;
-                }
-            }
-            if(seq)
-                seqlogger.log(LogStatus.PASS,"Sequence in order : More");
-            else {
-                seqlogger.log(LogStatus.FAIL, "Sequence NOT in order : More");
-                seqlogger.log(LogStatus.INFO, "Forbes List : <br />"+forb);
-                seqlogger.log(LogStatus.INFO, "Advisor List : <br />"+adv);
-            }
-
-        }
-        extent.endTest(seqlogger);
 
     }
 
     @AfterClass(alwaysRun = true)
     public void tearDown() throws Exception {
         extent.endTest(logger);
-        extent.endTest(seqlogger);
         extent.flush();
         extent.close();
         driver.quit();
