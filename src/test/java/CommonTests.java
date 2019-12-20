@@ -28,7 +28,7 @@ public class CommonTests {
     ExtentReports extent;
     ExtentTest logger;
     ExtentTest consoleTest;
-    String url ="https://www.forbes.com/wheels/l/wheels/top-20-best-auto-loans-in-2019/";
+    String url ="https://www.forbes.com/advisor/";
     String domain ="https://www.forbes.com/";
 
     Boolean DFPEnabled=true;
