@@ -1,5 +1,6 @@
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -24,7 +25,7 @@ public class Rough {
     ExtentReports extent;
     ExtentTest logger;
     ExtentTest consoleTest;
-    String url ="https://www3.forbes.com/lifestyle/the-lonely-planet-top-ten-tourism-countries-for-2020-ifs-vue/";
+    String url ="http://fbadvisor-staging.testingpe.com/reviews/top-ten-article-sample-tt/";
     String domain ="https://www.forbes.com/";
 
     Boolean DFPEnabled=true;
@@ -61,18 +62,66 @@ public class Rough {
     @Test
     public void Rough() throws Exception{
         driver.manage().window().maximize();
-        driver.get("http://forbes-staging.testingpe.com/ignore-test/forbes-400-top-100-richest-list-makers-2019-ifs-vue-mn-wnb/?s");
-        List<WebElement> medias = driver.findElements(By.className("media-credit"));
-        System.out.println(medias.size());
-        String previous ="";
-        for(WebElement w : medias){
-        ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",w);
-        ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,300)");
-        Thread.sleep(2000);
-        if(!previous.equalsIgnoreCase(driver.getCurrentUrl()))
-             System.out.println(driver.getCurrentUrl());
-        previous=driver.getCurrentUrl();
+        driver.get(url);
+        String s = driver.getPageSource();
+
+        int start =s.indexOf("<meta name=\"description\"");
+        int stop =start+2;
+//        try {
+//            System.out.println(s.substring(start, s.indexOf(">", stop)) + ">");
+//
+//        }catch (Exception e){//Testcase fail
+//             }
+        start = s.indexOf("<link rel=\"canonical\" href=");
+         stop=start+2;
+        try {
+            System.out.println(s.substring(start, s.indexOf(">", stop)) + ">");
+        }catch (Exception ex){//Testcase fail
+            System.out.println("Could not find");
         }
+
+        start = s.indexOf("<link rel=\"amphtml\" href=");
+        stop=start+2;
+        try {
+            System.out.println(s.substring(start, s.indexOf(">", stop)) + ">");
+        }catch (Exception ex){//Testcase fail
+            System.out.println("Could not find");
+        }
+
+        start = s.indexOf("<script type=\"application/ld+json\">");
+        stop=start+2;
+        try {
+            String schema =s.substring(start, s.indexOf("</script>", stop)) + "</script>";
+            if(schema.length()>46)
+            System.out.println(schema);
+            else
+                System.out.println("FAIL");
+        }catch (Exception ex){//Testcase fail
+            System.out.println("Could not find");
+        }
+
+        List <WebElement> elements= driver.findElements(By.tagName("meta"));
+        checkPresence("og:site_name","property",elements);
+        checkPresence("og:title","property",elements);
+        checkPresence("og:url","property",elements);
+        checkPresence("og:type","property",elements);
+        checkPresence("og:description","property",elements);
+        checkPresence("og:image","property",elements);
+        checkPresence("name","itemprop",elements);
+        checkPresence("headline","itemprop",elements);
+        checkPresence("description","itemprop",elements);
+        checkPresence("image","itemprop",elements);
+        checkPresence("author","itemprop",elements);
+        checkPresence("twitter:title","name",elements);
+        checkPresence("twitter:url","name",elements);
+        checkPresence("twitter:description","name",elements);
+        checkPresence("twitter:image","name",elements);
+        checkPresence("twitter:card","name",elements);
+        checkPresence("twitter:site","name",elements);
+        checkPresence("description","name",elements);
+        checkPresence("robots","name",elements);
+
+
     }
     @AfterTest
     public void closeTest()throws Exception{
@@ -83,5 +132,24 @@ public class Rough {
         //extent.endTest(logger);
         extent.flush();
         extent.close();
+    }
+    public void checkPresence(String key,String attribute,List<WebElement> elements){
+        int flag =0;
+        WebElement reference=null;
+        for(WebElement w : elements) {
+            try {
+                if (w.getAttribute(attribute).contains(key) && w.getAttribute("content").length() > 0)
+                {flag = 1;
+                reference=w;
+                }
+            }catch (Exception e){}
+        }
+        if(flag ==0) {
+        System.out.println("Not found : " + key);
+        }
+        else {
+            System.out.println(" found : " + key);
+            System.out.println("Content : " + reference.getAttribute("content"));
+        }
     }
 }
