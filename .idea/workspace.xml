@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="549a7836-4591-4525-b006-de0b22ede063" name="Default Changelist" comment="Removed comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdvisorHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/AdvisorHeader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +54,23 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.AdvisorHeader">
+    <configuration name="AdvisorCheckMultiple" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Advisor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Advisor" />
+      <option name="MAIN_CLASS_NAME" value="Advisor.AdvisorCheckMultiple" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AdvisorHeader" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <extension name="coverage">
@@ -73,10 +88,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Head" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Archives" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Head" />
+      <option name="MAIN_CLASS_NAME" value="Archives" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -84,33 +99,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Head.runTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CommonTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Head" />
-      <option name="METHOD_NAME" value="runTest" />
+      <option name="MAIN_CLASS_NAME" value="CommonTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Rough.Rough" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Rough" />
+      <option name="METHOD_NAME" value="Rough" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Lighthouse (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Lighthouse" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Lighthouse" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="quiz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Lighthouse" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -120,10 +125,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.AdvisorHeader" />
-        <item itemvalue="TestNG.Lighthouse (1)" />
-        <item itemvalue="TestNG.Lighthouse" />
-        <item itemvalue="TestNG.Head" />
-        <item itemvalue="TestNG.Head.runTest" />
+        <item itemvalue="TestNG.AdvisorCheckMultiple" />
+        <item itemvalue="TestNG.CommonTests" />
+        <item itemvalue="TestNG.Rough.Rough" />
+        <item itemvalue="TestNG.Archives" />
       </list>
     </recent_temporary>
   </component>
@@ -204,6 +209,10 @@
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
     <state x="-1787" y="-11" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1575990003579" />
+    <state x="363" y="91" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576585740506">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="91" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1576585740506" />
     <state x="-1738" y="45" width="403" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576062818897">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
@@ -212,49 +221,57 @@
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
     <state x="-1880" y="-224" key="CommitChangelistDialog2/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576055679949" />
-    <state width="2005" height="358" key="GridCell.Tab.0.bottom" timestamp="1576167409614">
+    <state x="-1755" y="-59" key="FileChooserDialogImpl" timestamp="1576833576863">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state width="2005" height="358" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409614" />
-    <state width="1323" height="252" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1575991277582" />
-    <state width="2005" height="358" key="GridCell.Tab.0.center" timestamp="1576167409614">
+    <state x="-1755" y="-59" key="FileChooserDialogImpl/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576833576863" />
+    <state width="2005" height="420" key="GridCell.Tab.0.bottom" timestamp="1576839624654">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state width="2005" height="358" key="GridCell.Tab.0.center/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409614" />
-    <state width="1323" height="252" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1575991277581" />
-    <state width="2005" height="358" key="GridCell.Tab.0.left" timestamp="1576167409614">
+    <state width="2005" height="420" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576839624654" />
+    <state width="1323" height="146" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576770843539" />
+    <state width="2005" height="420" key="GridCell.Tab.0.center" timestamp="1576839624654">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state width="2005" height="358" key="GridCell.Tab.0.left/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409614" />
-    <state width="1323" height="252" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1575991277581" />
-    <state width="2005" height="358" key="GridCell.Tab.0.right" timestamp="1576167409614">
+    <state width="2005" height="420" key="GridCell.Tab.0.center/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576839624654" />
+    <state width="1323" height="146" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1576770843539" />
+    <state width="2005" height="420" key="GridCell.Tab.0.left" timestamp="1576839624647">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state width="2005" height="358" key="GridCell.Tab.0.right/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409614" />
-    <state width="1323" height="252" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1575991277582" />
-    <state width="2005" height="376" key="GridCell.Tab.1.bottom" timestamp="1576167409607">
+    <state width="2005" height="420" key="GridCell.Tab.0.left/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576839624647" />
+    <state width="1323" height="146" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1576770843539" />
+    <state width="2005" height="420" key="GridCell.Tab.0.right" timestamp="1576839624654">
       <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="420" key="GridCell.Tab.0.right/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576839624654" />
+    <state width="1323" height="146" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1576770843539" />
+    <state width="1323" height="376" key="GridCell.Tab.1.bottom" timestamp="1576769926517">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="2005" height="376" key="GridCell.Tab.1.bottom/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409607" />
-    <state width="2005" height="376" key="GridCell.Tab.1.center" timestamp="1576167409607">
-      <screen x="-2560" y="-370" width="2048" height="1112" />
+    <state width="1323" height="376" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576769926517" />
+    <state width="1323" height="376" key="GridCell.Tab.1.center" timestamp="1576769926517">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="2005" height="376" key="GridCell.Tab.1.center/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409607" />
-    <state width="2005" height="376" key="GridCell.Tab.1.left" timestamp="1576167409606">
-      <screen x="-2560" y="-370" width="2048" height="1112" />
+    <state width="1323" height="376" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1576769926517" />
+    <state width="1323" height="376" key="GridCell.Tab.1.left" timestamp="1576769926517">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="2005" height="376" key="GridCell.Tab.1.left/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409606" />
-    <state width="2005" height="376" key="GridCell.Tab.1.right" timestamp="1576167409607">
-      <screen x="-2560" y="-370" width="2048" height="1112" />
+    <state width="1323" height="376" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1576769926517" />
+    <state width="1323" height="376" key="GridCell.Tab.1.right" timestamp="1576769926517">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="2005" height="376" key="GridCell.Tab.1.right/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576167409607" />
+    <state width="1323" height="376" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1576769926517" />
     <state x="-1879" y="74" key="run.anything.popup" timestamp="1576163719260">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
     <state x="-1879" y="74" key="run.anything.popup/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576163719260" />
-    <state x="-1873" y="-127" width="672" height="678" key="search.everywhere.popup" timestamp="1576152763098">
+    <state x="-1657" y="-15" width="672" height="678" key="search.everywhere.popup" timestamp="1576835038979">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state x="-1873" y="-127" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576152763098" />
+    <state x="-1657" y="-15" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576835038979" />
   </component>
 </project>
