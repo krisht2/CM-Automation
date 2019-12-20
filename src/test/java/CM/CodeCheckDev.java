@@ -15,9 +15,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CodeCheckDev {
-
-
-    String framworkLink="https://cm.internal.reports.mn/template/framework/preview.php?frm_id=800078864&pagename=keywords-only-1051x470.html\n";
     String filename="a3.html";
     String filepath="C:\\xampp\\htdocs\\"+filename;
 
@@ -61,12 +58,7 @@ public class CodeCheckDev {
             System.out.println("Please Recheck File name and File path");
         }
 
-        System.out.println(code);
-        logger= extent.startTest("Check for Mandates in Code");
-        String id=framworkLink.substring(framworkLink.indexOf("=")+1,framworkLink.indexOf("&"));
-        String frmLink = "https://cm.internal.reports.mn/template/framework/pagemapping.php?id=";
-        frmLink=frmLink+id;
-        System.out.println("Framework Internal Link = "+frmLink);
+
 
         int startComment = code.indexOf("<li>");
         int stopComment = code.indexOf("</li>");
