@@ -190,7 +190,7 @@ public void DFPCheck(String link,ExtentTest DFPTest){
                 adcount++;
                 if (((WebElement) a.get(i)).getAttribute("id").contains("_mN"))
                     mnAds++;
-                else if (((WebElement) a.get(i)).getAttribute("id").contains("google"))
+                else
                     dfpAds++;
             }
         }catch(Exception e){}
