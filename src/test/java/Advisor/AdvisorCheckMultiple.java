@@ -21,6 +21,7 @@ import java.io.File;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.logging.Level;
 
 
@@ -464,10 +465,20 @@ public class AdvisorCheckMultiple {
            System.out.println("More than 1 H1 found");
            SEOTest.log(LogStatus.FAIL,"Total number of H1 Tags : "+driver.findElements(By.tagName("h1")).size());
        }
-       else
+       else if(driver.findElements(By.tagName("h1")).size()==1)
            SEOTest.log(LogStatus.PASS,"Only 1 H1 Tag");
+       else
+           SEOTest.log(LogStatus.FAIL,"Total number of H1 Tags : "+driver.findElements(By.tagName("h1")).size());
        extent.endTest(SEOTest);
-       }catch (Exception e){imageTest.log(LogStatus.FAIL,"Error in Selenium Script : </br>"+e);extent.endTest(SEOTest);}
+       }catch (Exception e){SEOTest.log(LogStatus.FAIL,"Error in Selenium Script : </br>"+e);extent.endTest(SEOTest);}
+
+        if(driver.getTitle().length()<1)
+            SEOTest.log(LogStatus.FAIL,"NO Title"+driver.getTitle());
+        else
+            SEOTest.log(LogStatus.PASS,"Title : "+driver.getTitle());
+
+        String source= driver.getPageSource();
+
 
     }
    @AfterTest

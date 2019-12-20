@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
 
 import org.openqa.selenium.*;
 import org.apache.commons.collections4.CollectionUtils;
@@ -169,6 +170,7 @@ public class AdvisorHeader {
         for(int x =0;x<submenu2.size();x++) {
             submenu2.set(x,submenu2.get(x).trim());
             submenu2.set(x, submenu2.get(x).replace("’", "'"));
+            submenu2.set(x, submenu2.get(x).replace("  ", " "));
         }
 
         for(int x =0;x<headers.size();x++) {
@@ -183,6 +185,7 @@ public class AdvisorHeader {
         }
         for(int x =0;x<submenu.size();x++) {
             submenu.set(x, submenu.get(x).replace("’", "'"));
+            submenu.set(x, submenu.get(x).replace("  ", " "));
             submenu.set(x,submenu.get(x).trim());
         }
         ArrayList<String> differ = (ArrayList<String>) headers.clone();
@@ -264,7 +267,8 @@ public class AdvisorHeader {
                     if (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).isDisplayed()) {
                         String u = (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).getAttribute("href"));
                         System.out.println(key+" exists in : " + h);
-                        logger.log(LogStatus.WARNING,key+" ["+u+"] exists in : " + h);
+                       //To be added to Advisor
+                        logger.log(LogStatus.WARNING,"Add : "+key+" <br />["+u+"] <br />to : " + h);
                         changeHeaders.add(h);
                     }
                     else
@@ -278,7 +282,9 @@ public class AdvisorHeader {
                 if (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).isDisplayed()) {
                     String u = (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).getAttribute("href"));
                     System.out.println(key+" exists in : Featured");
-                    logger.log(LogStatus.WARNING,key+" ["+u+"] exists in : Featured");
+                    //To be added to Advisor
+
+                    logger.log(LogStatus.WARNING,"Add : "+key+" <br />["+u+"] <br/> to : Featured");
                     changeHeaders.add("Featured");
                 }
             }
@@ -290,7 +296,9 @@ public class AdvisorHeader {
                 if (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).isDisplayed()) {
                     String u = (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).getAttribute("href"));
                     System.out.println(key+" exists in : More");
-                    logger.log(LogStatus.WARNING,key+" ["+u+"] exists in : More");
+                    //To be added to Advisor
+
+                    logger.log(LogStatus.WARNING,"Add : "+key+" <br />["+u+"]<br />to : More");
                     changeHeaders.add("More");
                 }
             }
@@ -302,6 +310,7 @@ public class AdvisorHeader {
         driver.get("http://www.forbes.com/advisor");
             for(String key:submenu){
                 for(String h: differ){
+                    key=key.replaceAll("  "," ");
                      WebElement link = driver.findElement(By.linkText(h));
                     Actions a = new Actions(driver);
                      a.moveToElement(link).build().perform();
@@ -311,7 +320,9 @@ public class AdvisorHeader {
                         if (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).isDisplayed()) {
                            String u = (link.findElement(By.xpath("./..")).findElement(By.linkText(key)).getAttribute("href"));
                             System.out.println(key+" exists in : " + h);
-                            logger.log(LogStatus.WARNING,key+" ["+u+"] exists in : " + h);
+                            //To be Removed from Advisor
+
+                            logger.log(LogStatus.WARNING,"Remove : "+key+"<br/> ["+u+"] <br /> from : " + h);
 
 
                             changeHeaders.add(h);
@@ -349,6 +360,7 @@ public class AdvisorHeader {
             driver.get("https://www.forbes.com");
             window= new ChromeDriver();
             window.manage().window().maximize();
+            window.manage().window().setSize(new Dimension(1366,driver.manage().window().getSize().getHeight()));
             window.get("https://www.forbes.com/advisor");
             System.out.println(window.getCurrentUrl());
             System.out.println(driver.getCurrentUrl());
@@ -373,8 +385,12 @@ public class AdvisorHeader {
                             max = advisor.size();
                     }
                     for (int i = 0; i < max; i++) {
-                        String forbesval =forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                        String advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
+                        String advisorval="";
+                        String forbesval="";
+                        try {
+                             forbesval = forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
+                             advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
+                        }catch (Exception esc){}
                         adv.add(advisorval);
                         forb.add(forbesval);
                         System.out.println( advisorval+" " + forbesval);
@@ -397,6 +413,7 @@ public class AdvisorHeader {
                 }
                 catch (Exception ex) {
                     System.out.println("Could not find : " + h);
+                    System.out.println(ex);
                 }
             }
 
@@ -409,9 +426,14 @@ public class AdvisorHeader {
                     max = advisor.size();
             }
             for (int i = 0; i < max; i++) {
-                String forbesval =forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                String advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                adv.add(advisorval);
+                String advisorval="";
+                String forbesval="";
+                try {
+                    forbesval = forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
+                    advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
+                }
+                catch (Exception ex){}
+                 adv.add(advisorval);
                 forb.add(forbesval);
                 System.out.println( advisorval+" " + forbesval);
                 if(advisorval.equalsIgnoreCase(forbesval))
@@ -439,9 +461,13 @@ public class AdvisorHeader {
                     max = advisor.size();
             }
             for (int i = 0; i < max; i++) {
-                String forbesval =forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                String advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                adv.add(advisorval);
+                String forbesval="";
+                String advisorval="";
+                try {
+                    forbesval = forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
+                    advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
+                }catch (Exception ex){}
+                 adv.add(advisorval);
                 forb.add(forbesval);
                 System.out.println( advisorval+" " + forbesval);
                 if(advisorval.equalsIgnoreCase(forbesval))
