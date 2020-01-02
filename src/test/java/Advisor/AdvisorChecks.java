@@ -318,6 +318,7 @@ import java.util.regex.Pattern;
              System.out.println("More than 1 H1 found");
          else
              System.out.println("Only 1 H1");
+
      }
 
     @AfterTest

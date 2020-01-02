@@ -17,13 +17,14 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ScheduledExecutorService;
 import java.util.logging.Level;
 
 
 public class Rough {
     WebDriver driver;
     ExtentReports extent;
-    ExtentTest logger;
+    ExtentTest SEOTest;
     ExtentTest consoleTest;
     String url ="http://fbadvisor-staging.testingpe.com/reviews/top-ten-article-sample-tt/";
     String domain ="https://www.forbes.com/";
@@ -34,7 +35,7 @@ public class Rough {
 //            Driver Paths and Setting properties
 //        String ffDriverPath ="C:\\Users\\krish.t\\Downloads\\geckodriver.exe";
 //        System.setProperty("webdriver.gecko.driver",ffDriverPath);
-            String extentReportFile = System.getProperty("user.dir")+"\\CommonTests.html";
+            String extentReportFile = System.getProperty("user.dir")+"\\SEO.html";
             String extentReportImage = System.getProperty("user.dir")+"\\extentReportImage.png";
 
             String chromeDriverPath = "C:\\Users\\krish.t\\Downloads\\chromedriver.exe";
@@ -64,40 +65,50 @@ public class Rough {
         driver.manage().window().maximize();
         driver.get(url);
         String s = driver.getPageSource();
-
-        int start =s.indexOf("<meta name=\"description\"");
-        int stop =start+2;
-//        try {
-//            System.out.println(s.substring(start, s.indexOf(">", stop)) + ">");
-//
-//        }catch (Exception e){//Testcase fail
-//             }
-        start = s.indexOf("<link rel=\"canonical\" href=");
-         stop=start+2;
+        SEOTest=extent.startTest("TEST");
+        int start = s.indexOf("<link rel=\"canonical\" href=");
+         int stop=start+2;
         try {
-            System.out.println(s.substring(start, s.indexOf(">", stop)) + ">");
+            String key=s.substring(start, s.indexOf(">", stop)) + ">";
+            System.out.println(key);
+            SEOTest.log(LogStatus.PASS,key.replaceAll("<", "&lt; ").replaceAll(">", "&gt;"));
         }catch (Exception ex){//Testcase fail
             System.out.println("Could not find");
+            SEOTest.log(LogStatus.FAIL,"Could not find canonical link");
+
         }
 
         start = s.indexOf("<link rel=\"amphtml\" href=");
         stop=start+2;
         try {
-            System.out.println(s.substring(start, s.indexOf(">", stop)) + ">");
+            String key=s.substring(start, s.indexOf(">", stop)) + ">";
+            System.out.println(key);
+            SEOTest.log(LogStatus.PASS,key.replaceAll("<", "&lt; ").replaceAll(">", "&gt;"));
+
         }catch (Exception ex){//Testcase fail
             System.out.println("Could not find");
+            SEOTest.log(LogStatus.FAIL,"could not find AMP version");
+
         }
 
         start = s.indexOf("<script type=\"application/ld+json\">");
         stop=start+2;
         try {
             String schema =s.substring(start, s.indexOf("</script>", stop)) + "</script>";
-            if(schema.length()>46)
-            System.out.println(schema);
-            else
+            if(schema.length()>46) {
+                System.out.println(schema);
+                SEOTest.log(LogStatus.PASS,schema.replaceAll("<", "&lt; ").replaceAll(">", "&gt;"));
+
+            }
+            else{
                 System.out.println("FAIL");
+                SEOTest.log(LogStatus.FAIL,"could not find Schema.org");
+
+            }
         }catch (Exception ex){//Testcase fail
             System.out.println("Could not find");
+            SEOTest.log(LogStatus.FAIL,"could not find Schema.org");
+
         }
 
         List <WebElement> elements= driver.findElements(By.tagName("meta"));
@@ -128,7 +139,7 @@ public class Rough {
         //Thread.sleep(50000);
        driver.quit();
        // logger.getTest().setStatus(LogStatus.PASS);
-        extent.endTest(logger);
+        extent.endTest(SEOTest);
         //extent.endTest(logger);
         extent.flush();
         extent.close();
@@ -146,10 +157,14 @@ public class Rough {
         }
         if(flag ==0) {
         System.out.println("Not found : " + key);
+            SEOTest.log(LogStatus.FAIL,"could not find : "+key);
+
         }
         else {
             System.out.println(" found : " + key);
             System.out.println("Content : " + reference.getAttribute("content"));
+            SEOTest.log(LogStatus.PASS,"Found : "+key+"<br/> Content ="+reference.getAttribute("content"));
+
         }
     }
 }

@@ -159,33 +159,33 @@ public class AdvisorHeader {
         }
         for(int x =0;x<headers2.size();x++) {
             headers2.set(x,headers2.get(x).trim());
-            headers2.set(x, headers2.get(x).replace("’", "'"));
+            headers2.set(x, headers2.get(x).replaceAll("’", "'"));
         }
         for(int x =0;x<url2.size();x++){
-            url2.set(x,url2.get(x).replace("’","'"));
+            url2.set(x,url2.get(x).replaceAll("’","'"));
             url2.set(x,url2.get(x).trim());
             if(url2.get(x).endsWith("/"))
                 url2.set(x,url2.get(x).substring(0,url2.get(x).length()-1));
         }
         for(int x =0;x<submenu2.size();x++) {
             submenu2.set(x,submenu2.get(x).trim());
-            submenu2.set(x, submenu2.get(x).replace("’", "'"));
-            submenu2.set(x, submenu2.get(x).replace("  ", " "));
+            submenu2.set(x, submenu2.get(x).replaceAll("’", "'"));
+            submenu2.set(x, submenu2.get(x).replaceAll("  ", " "));
         }
 
         for(int x =0;x<headers.size();x++) {
-            headers.set(x, headers.get(x).replace("’", "'"));
+            headers.set(x, headers.get(x).replaceAll("’", "'"));
             headers.set(x,headers.get(x).trim());
         }
         for(int x =0;x<url.size();x++){
-            url.set(x,url.get(x).replace("’","'"));
+            url.set(x,url.get(x).replaceAll("’","'"));
             if(url.get(x).endsWith("/"))
                 url.set(x,url.get(x).substring(0,url.get(x).length()-1));
             url.set(x,url.get(x).trim());
         }
         for(int x =0;x<submenu.size();x++) {
-            submenu.set(x, submenu.get(x).replace("’", "'"));
-            submenu.set(x, submenu.get(x).replace("  ", " "));
+            submenu.set(x, submenu.get(x).replaceAll("’", "'"));
+            submenu.set(x, submenu.get(x).replaceAll("  ", " "));
             submenu.set(x,submenu.get(x).trim());
         }
         ArrayList<String> differ = (ArrayList<String>) headers.clone();
@@ -451,11 +451,14 @@ public class AdvisorHeader {
                 seqlogger.log(LogStatus.INFO, "Advisor List : <br />"+adv);
             }
 
-
+            adv.removeAll(adv);
+            forb.removeAll(forb);
+            seq=true;
             advisor = window.findElement(By.xpath(".//a[contains(text(),'More')]")).findElements(By.xpath("./../div/ul/li"));
             forbes = driver.findElement(By.xpath(".//span[contains(text(),'More')]")).findElements(By.xpath("./../div[2]/ul/li"));
             max = forbes.size();
             if (advisor.size() != forbes.size()){
+                System.out.println("Sizes not equal in More!!");
                 //seqlogger.log(LogStatus.FAIL, "Some items may have been added / Removed in this header");
                 if (max < advisor.size())
                     max = advisor.size();
@@ -464,8 +467,8 @@ public class AdvisorHeader {
                 String forbesval="";
                 String advisorval="";
                 try {
-                    forbesval = forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("amp;", "").replaceAll("’", "'").trim();
-                    advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("amp;", "").replaceAll("’", "'").trim();
+                    forbesval = forbes.get(i).findElement(By.tagName("a")).getAttribute("innerText").replaceAll("  ", " ").replaceAll("amp;", "").replaceAll("’", "'").trim();
+                    advisorval = advisor.get(i).findElement(By.xpath("./a")).getAttribute("innerHTML").replaceAll("  ", " ").replaceAll("’", "'").trim();
                 }catch (Exception ex){}
                  adv.add(advisorval);
                 forb.add(forbesval);

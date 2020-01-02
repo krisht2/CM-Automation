@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [CM.CM Tests]">
+  <test thread-count="5" verbose="0" name="CM.CM - Get Framework(failed)">
+    <classes>
+      <class name="Advisor.AdvisorHeader">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="advisorHeaderCheck"/>
+        </methods>
+      </class> <!-- Advisor.AdvisorHeader -->
+    </classes>
+  </test> <!-- CM.CM - Get Framework(failed) -->
+</suite> <!-- Failed suite [CM.CM Tests] -->

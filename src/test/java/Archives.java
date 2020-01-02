@@ -1,6 +1,10 @@
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.EmailAttachment;
+import org.apache.commons.mail.EmailException;
+import org.apache.commons.mail.MultiPartEmail;
 import org.eclipse.jetty.util.AbstractTrie;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -160,6 +164,11 @@ public class Archives {
     @AfterTest
     public void closeTest()throws Exception{
        driver.quit();
+        try {
+            if (urls.size() > 0)
+                sendEmail();
+        }
+        catch (Exception exception){}
         extent.flush();
         extent.close();
     }
@@ -235,4 +244,23 @@ public void HTMLEntityCheck(String link,ExtentTest html){
     }
     extent.endTest(html);
 }
+
+    public void sendEmail() throws EmailException {
+        EmailAttachment attachment = new EmailAttachment();
+        attachment.setPath(System.getProperty("user.dir")+"//Archive.html");
+        attachment.setDisposition(EmailAttachment.ATTACHMENT);
+        String to []={"krish.t@media.net","saili.m@media.net","fenil.g@media.net"};
+
+        MultiPartEmail email = new MultiPartEmail();
+        email.setHostName("smtp.googlemail.com");
+        email.setSmtpPort(587);
+        email.setAuthenticator(new DefaultAuthenticator("krish.t@media.net", "fstomkzuhqlyvcuv"));
+        email.setSSLOnConnect(true);
+        email.addTo(to);
+        email.setFrom("krish.t@media.net", "Krish");
+        email.setSubject("Archives Test - Automation Report");
+        email.setMsg("PFA The Published articles Test Report");
+        email.attach(attachment);
+        email.send();
+    }
 }
