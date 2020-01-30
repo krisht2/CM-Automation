@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="4.225" tests="2" errors="0" skipped="0" failures="2">
+<testsuite name="Advisor.AdvisorHeader" time="18.074" tests="2" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
@@ -15,6 +15,7 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="AdvisorHeader"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\krish.t\Desktop\quiz"/>
     <property name="java.runtime.version" value="1.8.0_231-b11"/>
@@ -45,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_231\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=AdvisorHeader test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -64,44 +65,64 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="advisorHeaderCheck" classname="Advisor.AdvisorHeader" time="1.907">
-    <failure message="unknown error: cannot determine loading status&#10;from disconnected: received Inspector.detached event&#10;  (Session info: chrome=79.0.3945.88)&#10;Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;&#10;System info: host: &apos;MMLDVKRISH&apos;, ip: &apos;172.16.174.20&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\krish.t\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: 9f942420532885d2c3acbb68d78a768a" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=79.0.3945.88)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MMLDVKRISH', ip: '172.16.174.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\krish.t\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9f942420532885d2c3acbb68d78a768a
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
-	at Advisor.AdvisorHeader.advisorHeaderCheck(AdvisorHeader.java:68)
+  <testcase name="advisorHeaderCheck" classname="Advisor.AdvisorHeader" time="8.883">
+    <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
+	at Advisor.AdvisorHeader.advisorHeaderCheck(AdvisorHeader.java:93)
 </failure>
-    <system-out><![CDATA[[TestNGContentHandler] [WARN] It is strongly recommended to add "<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >" at the top of your file, otherwise TestNG may fail or not work as expected.
-]]></system-out>
-    <system-err>Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 16484
+    <system-out>Configuring TestNG with: TestNG652Configurator
+Header = Billionaires
+Innovation
+Leadership
+Money
+Business
+Small Business
+Lifestyle
+Lists
+Advisor
+Featured
+Breaking
+More
+Size of submenu = 181
+All value = All Billionaires
+Innovation
+Leadership
+Money
+Business
+Small Business
+Lifestyle
+Lists
+Advisor
+Featured
+Breaking
+More
+Submenu item = Billionaires
+Submenu item URL = https://www.forbes.com/worlds-billionaires/
+Submenu item = All Billionaires
+Submenu item URL = https://www.forbes.com/worlds-billionaires/
+Submenu item = World’s Billionaires
+Submenu item URL = https://www.forbes.com/billionaires/
+Submenu item = Forbes 400
+Submenu item URL = https://www.forbes.com/forbes-400/
+Submenu item = America’s Richest Self-Made Women
+Submenu item URL = https://www.forbes.com/self-made-women/
+Submenu item = China’s Richest
+Submenu item URL = https://www.forbes.com/china-billionaires/
+Submenu item = India’s Richest
+Submenu item URL = https://www.forbes.com/india-billionaires/
+</system-out>
+    <system-err>Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 34658
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[1577109072.837][WARNING]: This version of ChromeDriver has not been tested with Chrome version 79.
-[1577109074.854][WARNING]: Timed out connecting to Chrome, retrying...
-Dec 23, 2019 7:21:16 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1577974780.707][WARNING]: This version of ChromeDriver has not been tested with Chrome version 79.
+[1577974782.727][WARNING]: Timed out connecting to Chrome, retrying...
+Jan 02, 2020 7:49:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[1577109078.988][WARNING]: Timed out connecting to Chrome, retrying...
-[1577109082.950][SEVERE]: Unable to receive message from renderer
+[1577974786.839][WARNING]: Timed out connecting to Chrome, retrying...
 </system-err>
   </testcase>
-  <testcase name="tearDown" classname="Advisor.AdvisorHeader" time="2.318">
+  <testcase name="tearDown" classname="Advisor.AdvisorHeader" time="9.191">
     <failure type="java.lang.NullPointerException:">java.lang.NullPointerException: null
-	at Advisor.AdvisorHeader.tearDown(AdvisorHeader.java:498)
+	at Advisor.AdvisorHeader.tearDown(AdvisorHeader.java:501)
 </failure>
   </testcase>
 </testsuite>

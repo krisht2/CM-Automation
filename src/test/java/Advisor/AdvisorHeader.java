@@ -43,7 +43,7 @@ public class AdvisorHeader {
     ArrayList<String> submenu2 = new ArrayList<String>();
     ArrayList<String> url2 = new ArrayList<String>();
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeTest(alwaysRun = true)
     public void setUp() throws Exception {
 
 
@@ -492,7 +492,7 @@ public class AdvisorHeader {
 
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterTest(alwaysRun = true)
     public void tearDown() throws Exception {
         extent.endTest(logger);
         extent.endTest(seqlogger);

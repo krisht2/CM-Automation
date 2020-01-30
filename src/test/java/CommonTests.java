@@ -28,7 +28,7 @@ public class CommonTests {
     ExtentReports extent;
     ExtentTest logger;
     ExtentTest consoleTest;
-    String url ="https://www.forbes.com/advisor/";
+    String url ="http://forbes-staging.testingpe.com/business/37-new-cars-to-avoid-ifs-vue-ct/";
     String domain ="https://www.forbes.com/";
 
     Boolean DFPEnabled=true;
@@ -241,7 +241,7 @@ public class CommonTests {
 
     }
     @Test(priority = 3)
-    public void pixelTracking() {
+    public void pixelTracking() throws Exception{
         logger = extent.startTest("On page load Pixel tracking");
         String scriptToExecute = "var performance = window.performance || window.mozPerformance || window.msPerformance || window.webkitPerformance || {}; var network = performance.getEntries() || {}; return network;";
         String[] pixels = {"tfa.js", "tr.snapchat.com/p","chartbeat.js", "https://widgets.outbrain.com/outbrain.js", "cdn.keywee.co/dist/analytics.min.js", "www.google-analytics.com/analytics.js", "b.scorecardresearch.com", "connect.facebook.net/en_US/fbevents.js", "https://s.yimg.com/wi/ytc.js", "amplify.outbrain.com/cp/obtp.js"};
@@ -265,7 +265,7 @@ public class CommonTests {
 //                System.out.println(network.substring(network.indexOf("initiatortype"),network.indexOf("next")));
 //            }
 //        }
-
+        Thread.sleep(3000);
         List<LogEntry> entries = driver.manage().logs().get(LogType.PERFORMANCE).getAll();
 
         String entire="";
@@ -340,7 +340,7 @@ public class CommonTests {
                     //System.out.println("NO IFS Default button :"+driver.getCurrentUrl());
                 }
         }
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         String net = ((JavascriptExecutor)driver).executeScript(scriptToExecute).toString();
         List <String>networkCalls = Arrays.asList(net.split("}, \\{"));
         System.out.println(networkCalls);
@@ -361,7 +361,7 @@ public class CommonTests {
 //            }
 //        }
 
-        Thread.sleep(15000);
+        Thread.sleep(18000);
         List<LogEntry> entries = driver.manage().logs().get(LogType.PERFORMANCE).getAll();
 
         String entire="";

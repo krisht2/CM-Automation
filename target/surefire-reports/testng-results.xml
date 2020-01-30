@@ -2,48 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="CM.CM Tests" duration-ms="12901" started-at="2019-12-23T13:51:10Z" finished-at="2019-12-23T13:51:23Z">
+  <suite name="Advisor.AdvisorHeader" duration-ms="19604" started-at="2020-01-02T14:19:38Z" finished-at="2020-01-02T14:19:58Z">
     <groups>
     </groups>
-    <test name="CM.CM - Get Framework" duration-ms="12901" started-at="2019-12-23T13:51:10Z" finished-at="2019-12-23T13:51:23Z">
+    <test name="Command line test" duration-ms="19604" started-at="2020-01-02T14:19:38Z" finished-at="2020-01-02T14:19:58Z">
       <class name="Advisor.AdvisorHeader">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Advisor.AdvisorHeader@3701eaf6]" name="setUp" is-config="true" duration-ms="10565" started-at="2019-12-23T13:51:10Z" finished-at="2019-12-23T13:51:21Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Advisor.AdvisorHeader@6537cf78]" name="setUp" is-config="true" duration-ms="10413" started-at="2020-01-02T14:19:38Z" finished-at="2020-01-02T14:19:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="advisorHeaderCheck()[pri:0, instance:Advisor.AdvisorHeader@3701eaf6]" name="advisorHeaderCheck" duration-ms="1881" started-at="2019-12-23T13:51:21Z" finished-at="2019-12-23T13:51:23Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=79.0.3945.88)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MMLDVKRISH', ip: '172.16.174.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\krish.t\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9f942420532885d2c3acbb68d78a768a]]>
-            </message>
+        <test-method status="FAIL" signature="advisorHeaderCheck()[pri:0, instance:Advisor.AdvisorHeader@6537cf78]" name="advisorHeaderCheck" duration-ms="8867" started-at="2020-01-02T14:19:48Z" finished-at="2020-01-02T14:19:57Z">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=79.0.3945.88)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'MMLDVKRISH', ip: '172.16.174.20', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\krish.t\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9f942420532885d2c3acbb68d78a768a
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
-at Advisor.AdvisorHeader.advisorHeaderCheck(AdvisorHeader.java:68)
+              <![CDATA[java.lang.NullPointerException
+at Advisor.AdvisorHeader.advisorHeaderCheck(AdvisorHeader.java:93)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,9 +38,10 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:126)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:117)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -80,15 +53,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:95)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- advisorHeaderCheck -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:Advisor.AdvisorHeader@3701eaf6]" name="tearDown" is-config="true" duration-ms="414" started-at="2019-12-23T13:51:23Z" finished-at="2019-12-23T13:51:23Z">
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:Advisor.AdvisorHeader@6537cf78]" name="tearDown" is-config="true" duration-ms="309" started-at="2020-01-02T14:19:57Z" finished-at="2020-01-02T14:19:58Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at Advisor.AdvisorHeader.tearDown(AdvisorHeader.java:498)
+at Advisor.AdvisorHeader.tearDown(AdvisorHeader.java:501)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -112,9 +85,10 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 at org.testng.TestNG.runSuites(TestNG.java:1049)
 at org.testng.TestNG.run(TestNG.java:1017)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:126)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:117)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -131,6 +105,6 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:95)
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Advisor.AdvisorHeader -->
-    </test> <!-- CM.CM - Get Framework -->
-  </suite> <!-- CM.CM Tests -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Advisor.AdvisorHeader -->
 </testng-results>

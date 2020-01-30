@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [CM.CM Tests]">
-  <test thread-count="5" verbose="0" name="CM.CM - Get Framework(failed)">
+<suite verbose="0" name="Failed suite [Advisor.AdvisorHeader]">
+  <test thread-count="5" verbose="0" name="Command line test(failed)">
     <classes>
       <class name="Advisor.AdvisorHeader">
         <methods>
@@ -11,5 +11,5 @@
         </methods>
       </class> <!-- Advisor.AdvisorHeader -->
     </classes>
-  </test> <!-- CM.CM - Get Framework(failed) -->
-</suite> <!-- Failed suite [CM.CM Tests] -->
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Advisor.AdvisorHeader] -->

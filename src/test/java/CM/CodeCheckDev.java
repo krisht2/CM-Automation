@@ -6,7 +6,6 @@ import org.jetbrains.annotations.NotNull;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -15,13 +14,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CodeCheckDev {
-    String filename="a3.html";
+    String filename="abc.html";
     String filepath="C:\\xampp\\htdocs\\"+filename;
 
     ExtentReports extent;
     ExtentTest logger;
     String extentReportFile = System.getProperty("user.dir")+"\\CMCodeTestDev.html";
-    String blacklist[]={"ad","pe","banner","overlay","mn","media.net","mnet","project","about:_blank","projectpe","kw","recirc","btf","ads","forbes","ga","google","badabhai",".js","window.onload","line1","loose.dtd","detect text"};
+    String blacklist[]={"ad","pe","banner","mn","media.net","mnet","project","about:_blank","about_blank","projectpe","kw","recirc","btf","ads","forbes","ga","google","badabhai",".js","window.onload","line1","loose.dtd","detect text"};
     Config config = new Config();
     String domain = config.domain;
 
@@ -35,7 +34,9 @@ public class CodeCheckDev {
     String IOSWidth =".ios_fix{width: 1px; min-width: 100%; *width: 100%;}";
     String tagPost="<tag:post_form_html />";
     String footer ="<a class=\"footer\" href=\"<tag:mnet_adchoice_link />\" target=\"_blank\"></a>";
-
+    String heightResponsive="<tag:adjust_iframe_height_to_body_definition />";
+    String heightScript="<scripttype=\"text/javascript\">functionformatViewAfterLoad(){<tag:adjust_iframe_height_to_body_call/>};window.onresize=function(){<tag:adjust_iframe_height_to_body_call/>};</script>";
+    String domainName = "<title><tag:domain_name";
     ArrayList<String>imageList = new ArrayList<>();
     String code ="";
 
@@ -44,23 +45,25 @@ public class CodeCheckDev {
         extent = new ExtentReports(extentReportFile, true);
         extent.loadConfig(new File(System.getProperty("user.dir")+"\\extent-config.xml"));
     }
+
     @Test
     public void checkCode()throws Exception{
-
+    logger = extent.startTest("Check for Domain Keywords & KBBs");
         try {
             BufferedReader in = new BufferedReader(new FileReader(filepath));
             String str;
             while ((str = in.readLine()) != null) {
-                code +=str;
+                code +=str+"\n";
             }
             in.close();
         } catch (IOException e) {
             System.out.println("Please Recheck File name and File path");
         }
 
+        code=filterCode(code);
 
 
-        int startComment = code.indexOf("<li>");
+        int startComment = code.indexOf("<li");
         int stopComment = code.indexOf("</li>");
         int difference = stopComment-startComment;
         String comment = code.substring(startComment, stopComment + 5);
@@ -79,12 +82,12 @@ public class CodeCheckDev {
 //        else
 //            logger.log(LogStatus.WARNING,"Warning! NO KBB present");
         comment = comment.replace("<", "&lt; ").replace(">", "&gt;");
-        logger.log(LogStatus.INFO,comment);
+//        logger.log(LogStatus.INFO,comment);
 
         k++;
-        while (code.indexOf("<li>",stopComment)!=-1) {
+        while (code.indexOf("<li",stopComment)!=-1) {
             // System.out.println("\n\nOld : "+startComment +" "+ stopComment+" "+difference+" ");
-            startComment = code.indexOf("<li>", stopComment + 1);
+            startComment = code.indexOf("<li", stopComment + 1);
             stopComment = code.indexOf("</li>", startComment);
             difference = stopComment - startComment;
 
@@ -105,7 +108,7 @@ public class CodeCheckDev {
                 logger.log(LogStatus.WARNING,"Warning! NO KBB present");
                 comment = comment.replace("<", "&lt; ").replace(">", "&gt;");
                 System.out.println(comment);
-                logger.log(LogStatus.INFO,comment);
+              //  logger.log(LogStatus.INFO,comment);
                 k++;
         }
 
@@ -115,7 +118,7 @@ public class CodeCheckDev {
 
     @Test(priority = 1)
     public void checkMustHaves(){
-        logger=extent.startTest("Check for Must have keywords.");
+//        logger=extent.startTest("Check for Must have keywords.");
         checkIfPresent(code,docType);
         checkIfPresent(code,xml);
         checkIfPresent(code,stlhead);
@@ -125,12 +128,29 @@ public class CodeCheckDev {
         checkIfPresent(code,resetCSS);
         checkIfPresent(code,IOSWidth);
         checkIfPresent(code,tagPost);
-        checkIfPresent(code,footer);
-        extent.endTest(logger);
+        checkIfPresent(code,domainName);
+//        checkIfPresent(code,footer);
+       try {
+           String footter = code.substring(code.indexOf("<a class=\"footer\" href=\""), code.lastIndexOf("</a>") + 4);
+       int foot = (code.lastIndexOf("</a>")-code.indexOf("<a class=\"footer\" href=\"")-23);
+        if(foot <25) {
+            System.out.println("FAIL");
+        logger.log(LogStatus.FAIL,"Footer Not present: "+footter.replaceAll("<", "&lt; ").replaceAll(">", "&gt;"));
+        }else {
+            logger.log(LogStatus.PASS,"Footer Present: "+footter.replaceAll("<", "&lt; ").replaceAll(">", "&gt;"));
+            System.out.println("PASS!");
+        }System.out.println(foot);
+       }
+       catch (Exception e){
+           logger.log(LogStatus.FAIL,"No footer found");
+           System.out.println(e);
+       }
+
+//        extent.endTest(logger);
     }
     @Test(priority = 3)
     public void checkKBBImages(){
-        logger= extent.startTest("Check KBB Images Mapping");
+//        logger= extent.startTest("Check KBB Images Mapping");
 
         String imageFormats[] ={".jpg",".png",".gif",".jpeg"};
         int imageCount=0;
@@ -193,7 +213,7 @@ public class CodeCheckDev {
 
             }
 
-        }catch (StringIndexOutOfBoundsException se){logger.log(LogStatus.WARNING,"No KBBs found in code"); extent.endTest(logger);}
+        }catch (StringIndexOutOfBoundsException se){logger.log(LogStatus.WARNING,"No KBBs found in code"); /*extent.endTest(logger);*/}
 
         for (int i = 0; i < imageFormats.length; i++) {
                 String key = imageFormats[i];
@@ -206,24 +226,25 @@ public class CodeCheckDev {
                 }
 
             }
-            logger.log(LogStatus.INFO, "Num Images : " + imageCount);
-            logger.log(LogStatus.INFO, "Number of KBBs =" + (k - 1));
+           // logger.log(LogStatus.INFO, "Num Images : " + imageCount);
+            //logger.log(LogStatus.INFO, "Number of KBBs =" + (k - 1));
             if (imageCount == (k - 1))
                 logger.log(LogStatus.PASS, "Equal number of KBBs and Images : " + imageCount);
             else
                 logger.log(LogStatus.FAIL, "Inconsistent KBBs: " + (k - 1) + " and Images : " + imageCount);
-            extent.endTest(logger);
+//            extent.endTest(logger);
     }
 
     @Test(priority = 2)
     public void checkBlacklistedKeyowrds() throws Exception{
-        logger=extent.startTest("Check for blacklisted keywords.");
+//        logger=extent.startTest("Check for blacklisted keywords.");
 
 
                     String lowCode = code.toLowerCase();
                     String keyword ="";
                     lowCode=lowCode+"/loose.dtd\""+ Arrays.toString(blacklist);
                     System.out.println("Low: "+lowCode);
+
                     for(int x =0;x<blacklist.length;x++) {
 //                        Pattern p = Pattern.compile("(.*([^a-zA-Z]|\\s)+"+blacklist[x]+"([^a-zA-Z]|\\s)+.*)|("+blacklist[x]+"([^a-zA-Z]|\\s)+.*)|(.*([^a-zA-Z]|\\s)+"+blacklist[x]+")|"+blacklist[x]);
 //                        boolean classMatch = p.matcher(lowCode).matches();
@@ -246,13 +267,13 @@ public class CodeCheckDev {
 //                        }
                         checkIfAbsent(code,blacklist[x]);
                     }
-                    extent.endTest(logger);
+  //                  extent.endTest(logger);
 
             }
 
     @Test(priority = 1)
     public void checkScripts(){
-        logger=extent.startTest("Check Script tags in code");
+    //    logger=extent.startTest("Check Script tags in code");
         String comment ="";
         int startComment = code.indexOf("<script");
         int stopComment = code.indexOf("</script");
@@ -262,7 +283,7 @@ public class CodeCheckDev {
             System.out.println(comment);
             comment = comment.replace("<", "&lt; ").replace(">", "&gt;");
 
-            logger.log(LogStatus.INFO, "Script found : <br />" + comment);
+           // logger.log(LogStatus.INFO, "Script found : <br />" + comment);
         }
         catch (Exception e){}
         int k =2;
@@ -279,9 +300,13 @@ public class CodeCheckDev {
                 System.out.println(comment);
                 k++;
             comment=comment.replace("<", "&lt; ").replace(">", "&gt;");
-             logger.log(LogStatus.INFO, "Script found : <br />" + comment);
+            //
+            // logger.log(LogStatus.INFO, "Script found : <br />" + comment);
         }
-        extent.endTest(logger);
+      //  extent.endTest(logger);
+
+
+
     }
 
     @AfterTest
@@ -320,4 +345,24 @@ public class CodeCheckDev {
         }
     }
 
+    public String filterCode(String code){
+        String copy = code.replaceAll("\n","");
+        copy = copy.replaceAll("\t","");
+        copy = copy.replaceAll(" ","");
+        System.out.println(copy);
+        if(copy.contains(heightResponsive)||copy.contains(heightScript)) {
+            System.out.println("Present");
+            if(copy.contains(heightResponsive)&&copy.contains(heightScript))
+                System.out.println("Both Present");
+            else
+                System.out.println("Height sctipt ussyessssssss");
+        }
+        else
+            System.out.println("Abssent");
+
+        code = (code.replaceAll("(?s)<!--.*?-->", ""));
+        code = (code.replaceAll("(?s)/#.*?#/", ""));
+
+        return code;
+    }
 }

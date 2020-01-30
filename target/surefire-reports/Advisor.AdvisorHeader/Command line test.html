@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>TestNG:  CM.CM - Get Framework</title>
+<title>TestNG:  Command line test</title>
 <link href="../testng.css" rel="stylesheet" type="text/css" />
 <link href="../my-testng.css" rel="stylesheet" type="text/css" />
 
@@ -53,13 +53,13 @@ function toggleAllBoxes() {
 
 </head>
 <body>
-<h2 align='center'>CM.CM - Get Framework</h2><table border='1' align="center">
+<h2 align='center'>Command line test</h2><table border='1' align="center">
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Dec 23 19:21:10 IST 2019</td>
+<td>Started on:</td><td>Thu Jan 02 19:49:38 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>12 seconds (12901 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19604 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,10 +77,10 @@ function toggleAllBoxes() {
 <tr>
 <td title='Advisor.AdvisorHeader.tearDown()'><b>tearDown</b><br>Test class: Advisor.AdvisorHeader</td>
 <td><div><pre>java.lang.NullPointerException
-	at Advisor.AdvisorHeader.tearDown(AdvisorHeader.java:498)
-... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1789110533", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1789110533'><pre>java.lang.NullPointerException
-	at Advisor.AdvisorHeader.tearDown(AdvisorHeader.java:498)
+	at Advisor.AdvisorHeader.tearDown(AdvisorHeader.java:501)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1288052401", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1288052401'><pre>java.lang.NullPointerException
+	at Advisor.AdvisorHeader.tearDown(AdvisorHeader.java:501)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -104,9 +104,10 @@ function toggleAllBoxes() {
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 	at org.testng.TestNG.runSuites(TestNG.java:1049)
 	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:126)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:117)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -118,7 +119,7 @@ function toggleAllBoxes() {
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:95)
 </pre></div></td>
 <td>0</td>
-<td>Advisor.AdvisorHeader@3701eaf6</td></tr>
+<td>Advisor.AdvisorHeader@6537cf78</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
@@ -129,43 +130,11 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='Advisor.AdvisorHeader.advisorHeaderCheck()'><b>advisorHeaderCheck</b><br>Test class: Advisor.AdvisorHeader</td>
-<td><div><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=79.0.3945.88)
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MMLDVKRISH&apos;, ip: &apos;172.16.174.20&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\krish.t\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9f942420532885d2c3acbb68d78a768a
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
-	at Advisor.AdvisorHeader.advisorHeaderCheck(AdvisorHeader.java:68)
-... Removed 38 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1176968662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1176968662'><pre>org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=79.0.3945.88)
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;MMLDVKRISH&apos;, ip: &apos;172.16.174.20&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\krish.t\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58016}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9f942420532885d2c3acbb68d78a768a
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:276)
-	at Advisor.AdvisorHeader.advisorHeaderCheck(AdvisorHeader.java:68)
+<td><div><pre>java.lang.NullPointerException
+	at Advisor.AdvisorHeader.advisorHeaderCheck(AdvisorHeader.java:93)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace905847077", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace905847077'><pre>java.lang.NullPointerException
+	at Advisor.AdvisorHeader.advisorHeaderCheck(AdvisorHeader.java:93)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -188,9 +157,10 @@ Session ID: 9f942420532885d2c3acbb68d78a768a
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
 	at org.testng.TestNG.runSuites(TestNG.java:1049)
 	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:126)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:110)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:117)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -201,8 +171,8 @@ Session ID: 9f942420532885d2c3acbb68d78a768a
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:95)
 </pre></div></td>
-<td>1</td>
-<td>Advisor.AdvisorHeader@3701eaf6</td></tr>
+<td>8</td>
+<td>Advisor.AdvisorHeader@6537cf78</td></tr>
 </table><p>
 </body>
 </html>

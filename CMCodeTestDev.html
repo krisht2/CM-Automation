@@ -43,7 +43,6 @@
 			</div>
 			<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 				<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
-					<li class='analysis waves-effect'><a href='#!' class='exceptions-view' onclick="_updateCurrentStage(2)"><i class='mdi-action-bug-report'></i>Exceptions</a></li>
 				<li class='analysis waves-effect'>
 					<a href='#!' onclick="_updateCurrentStage(-1)" class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a>
 				</li>
@@ -54,7 +53,7 @@
 					<i class='mdi-hardware-desktop-windows'></i>
 				</li>
 				<li>
-					<span class='suite-started-time'>2019-12-10 19:34:14</span>
+					<span class='suite-started-time'>2020-01-29 18:58:38</span>
 				</li>
 				<li>
 					<span>v2.41.1</span>
@@ -84,25 +83,25 @@
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-current'> 
 							<span class='panel-name'>Total Time Taken (Current Run)</span> 
-							<span class='suite-total-time-current-value panel-lead'>0h 0m 0s+523ms</span> 
+							<span class='suite-total-time-current-value panel-lead'>0h 0m 0s+560ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s12'>
 						<div class='card suite-total-time-overall'> 
 							<span class='panel-name'>Total Time Taken (Overall)</span> 
-							<span class='suite-total-time-overall-value panel-lead'>0h 0m 0s+523ms</span> 
+							<span class='suite-total-time-overall-value panel-lead'>0h 0m 0s+560ms</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-start-time'>
 						<div class='card accent green-accent'> 
 							<span class='panel-name'>Start</span> 
-							<span class='panel-lead suite-started-time'>2019-12-10 19:34:14</span> 
+							<span class='panel-lead suite-started-time'>2020-01-29 18:58:37</span> 
 						</div> 
 					</div>
 					<div class='col l2 m4 s6 suite-end-time'>
 						<div class='card accent pink-accent'> 
 							<span class='panel-name'>End</span> 
-							<span class='panel-lead suite-ended-time'>2019-12-10 19:34:14</span> 
+							<span class='panel-lead suite-ended-time'>2020-01-29 18:58:38</span> 
 						</div> 
 					</div>
 				</div>
@@ -206,9 +205,7 @@
 								<ul id='tests-toggle' class='dropdown-content'>
 									<li class='pass'><a href='#!'>Pass</a></li>
 									<li class='fail'><a href='#!'>Fail</a></li>
-										<li class='warning'><a href='#!'>Warning</a></li>
 									<li class='skip'><a href='#!'>Skip</a></li>
-										<li class='unknown'><a href='#!'>Unknown</a></li>
 									<li class='divider'></li>
 									<li class='clear'><a href='#!'>Clear Filters</a></li>
 								</ul>
@@ -240,195 +237,17 @@
 						<div class='card-panel no-padding-h no-padding-v no-margin-v'>
 							<div class='wrapper'>
 								<ul id='test-collection' class='test-collection'>
-										<li class='collection-item test displayed active fail ' extentid='20551b53-8435-4b1b-95ae-5614586911d0'>
+										<li class='collection-item test displayed active fail ' extentid='5f717333-f98f-4e47-966e-ab19e94c6e82'>
 											<div class='test-head'>
-												<span class='test-name'>Check for Mandates in Code <i class='tooltipped mdi-alert-error' data-position='top' data-delay='50' data-tooltip='Close was called before test could end safely using EndTest.'></i></span>
+												<span class='test-name'>Check for Domain Keywords & KBBs </span>
 												<span class='test-status label right outline capitalize fail'>fail</span>
 												<span class='category-assigned hide '></span>
 											</div>
 											<div class='test-body'>
 												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+356ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'><pre>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at CM.CodeCheckDev.tearDown(CodeCheckDev.java:299)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.TestRunner.afterRun(TestRunner.java:725)
-	at org.testng.TestRunner.run(TestRunner.java:509)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
-</pre></td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active fail ' extentid='43824e57-2806-4a9c-8988-af20f0d3f33b'>
-											<div class='test-head'>
-												<span class='test-name'>Check for Must have keywords. </span>
-												<span class='test-status label right outline capitalize fail'>fail</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>&lt; !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt; Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>&lt; html xmlns="http://www.w3.org/1999/xhtml"&gt; Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>&lt; stl_head&gt; Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>&lt; title&gt;&lt; tag:domain_name /&gt;&lt; /title&gt; Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>&lt; meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"&gt; Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>&lt; meta http-equiv="Content-Type" content="text/html; charset=&lt; tag:charset /&gt;"&gt; Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>&lt; tag:reset_css /&gt; Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>.ios_fix{width: 1px; min-width: 100%; *width: 100%;} Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>&lt; tag:post_form_html /&gt; Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>&lt; a class="footer" href="&lt; tag:mnet_adchoice_link /&gt;" target="_blank"&gt;&lt; /a&gt; Not found!</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active unknown ' extentid='1954131d-5d58-463e-a9b9-48a8acd85cce'>
-											<div class='test-head'>
-												<span class='test-name'>Check Script tags in code </span>
-												<span class='test-status label right outline capitalize unknown'>unknown</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active pass ' extentid='0fe52509-a4fd-4499-a612-624c6fd2d6a8'>
-											<div class='test-head'>
-												<span class='test-name'>Check for blacklisted keywords. </span>
-												<span class='test-status label right outline capitalize pass'>pass</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
+													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2020-01-29 18:58:37</span>
+													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2020-01-29 18:58:37</span>
+													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+60ms</span>
 												</div>
 												<div class='test-desc'></div>
 												<div class='test-attributes'>
@@ -445,170 +264,298 @@
 														<tbody>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>ad Not found!</td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; domain_keyword:1 /&gt;</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>pe Not found!</td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>"dak1 anchorhref"&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>"dck1 anchortext"&gt; Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>kbb_image_bg:1</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; domain_keyword:2 /&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>"dak2 anchorhref"&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>"dck2 anchortext"&gt; Not found!</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>kbb_image_bg:2</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; domain_keyword:3 /&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>"dak3 anchorhref"&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>"dck3 anchortext"&gt; Not found!</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>kbb_image_bg:3</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; domain_keyword:4 /&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>"dak4 anchorhref"&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>"dck4 anchortext"&gt; Not found!</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>kbb_image_bg:4</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; !DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; html xmlns="http://www.w3.org/1999/xhtml"&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; stl_head&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; title&gt;&lt; tag:domain_name /&gt;&lt; /title&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; meta http-equiv="Content-Type" content="text/html; charset=&lt; tag:charset /&gt;"&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; tag:reset_css /&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>.ios_fix{width: 1px; min-width: 100%; *width: 100%;}</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; tag:post_form_html /&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; title&gt;&lt; tag:domain_name</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>Footer Present: &lt; a class="footer" href="&lt; tag:mnet_adchoice_link /&gt;" target="_blank"&gt;&lt; /a&gt;</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>Found :ad</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>Found :pe</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>banner Not found!</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>overlay Not found!</td>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>Found :mn</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>mn Not found!</td>
-																</tr>
-																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>media.net Not found!</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>mnet Not found!</td>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>Found :mnet</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>project Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>about:_blank Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>about_blank Not found!</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>projectpe Not found!</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>kw Not found!</td>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>Found :kw</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>recirc Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>btf Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>ads Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>forbes Not found!</td>
 																</tr>
 																<tr>
-																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>ga Not found!</td>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>Found :ga</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>google Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>badabhai Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>.js Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>window.onload Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>line1 Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>loose.dtd Not found!</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
+																	<td class='timestamp'>18:58:37</td>
 																	<td class='step-details'>detect text Not found!</td>
-																</tr>
-														</tbody>
-													</table>
-													<ul class='collapsible node-list' data-collapsible='accordion'>
-													</ul>
-												</div>
-											</div>
-										</li>
-										<li class='collection-item test displayed active warning ' extentid='7dc4f833-75eb-41fa-bb27-375a74931148'>
-											<div class='test-head'>
-												<span class='test-name'>Check KBB Images Mapping </span>
-												<span class='test-status label right outline capitalize warning'>warning</span>
-												<span class='category-assigned hide '></span>
-											</div>
-											<div class='test-body'>
-												<div class='test-info'>
-													<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2019-12-10 19:34:14</span>
-													<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+0ms</span>
-												</div>
-												<div class='test-desc'></div>
-												<div class='test-attributes'>
-												</div>
-												<div class='test-steps'>
-													<table class='bordered table-results'>
-														<thead>
-															<tr>
-																<th>Status</th>
-																<th>Timestamp</th>
-																<th>Details</th>
-															</tr>
-														</thead>
-														<tbody>
-																<tr>
-																	<td class='status warning' title='warning' alt='warning'><i class='mdi-alert-warning'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>No KBBs found in code</td>
-																</tr>
-																<tr>
-																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>Num Images : 0</td>
-																</tr>
-																<tr>
-																	<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>Number of KBBs =0</td>
 																</tr>
 																<tr>
 																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
-																	<td class='timestamp'>19:34:14</td>
-																	<td class='step-details'>Equal number of KBBs and Images : 0</td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; kbb_image_bg:1 src='&lt; tag:image_path_new /&gt;/fallback1.jpg' tag='div' width='140' height='110' class="dispImg"&gt;&lt; kbb_image_bg:1 /&gt;&lt; /<br /><br />Fallback = fallback1.jpg<br /><br />KBB =lt; kbb_image_bg:1</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>No image uploaded : fallback1.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; kbb_image_bg:2 src='&lt; tag:image_path_new /&gt;/fallback2.jpg' tag='div' width='140' height='110' class="dispImg"&gt;&lt; kbb_image_bg:2 /&gt;&lt; /<br /><br />Fallback = fallback2.jpg<br /><br />KBB =bb_image_bg:2</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>No image uploaded : fallback2.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; kbb_image_bg:3 src='&lt; tag:image_path_new /&gt;/fallback3.jpg' tag='div' width='140' height='110' class="dispImg"&gt;&lt; kbb_image_bg:3 /&gt;&lt; /<br /><br />Fallback = fallback3.jpg<br /><br />KBB =bb_image_bg:3</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>No image uploaded : fallback3.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>&lt; kbb_image_bg:4 src='&lt; tag:image_path_new /&gt;/fallback4.jpg' tag='div' width='140' height='110' class="dispImg"&gt;&lt; kbb_image_bg:4 /&gt;&lt; /<br /><br />Fallback = fallback4.jpg<br /><br />KBB =bb_image_bg:4</td>
+																</tr>
+																<tr>
+																	<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>No image uploaded : fallback4.jpg</td>
+																</tr>
+																<tr>
+																	<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+																	<td class='timestamp'>18:58:37</td>
+																	<td class='step-details'>Equal number of KBBs and Images : 4</td>
 																</tr>
 														</tbody>
 													</table>
@@ -648,95 +595,6 @@
 			<!-- /categories -->
 			
 			<!-- exceptions -->
-				<div id='exceptions-view' class='row _addedTable hide'>
-					<div class='col _addedCell1'>
-						<div class='contents'>
-							<div class='card-panel heading'>
-								<h5>Defects</h5>
-							</div>
-							<div class='card-panel filters'>
-								<div class='search' alt='Search tests' title='Search tests'>
-									<div class='input-field left'>
-										<input id='searchTests' type='text' class='validate' placeholder='Search tests...'>
-									</div>
-									<a href="#" class='btn-floating btn-small waves-effect waves-light blue lighten-1'>
-										<i class='mdi-action-search'></i>
-									</a>
-								</div>
-							</div>
-							<div class='card-panel no-padding-h no-padding-v'>
-								<div class='wrapper'>
-									<ul id='exception-collection' class='exception-collection'>
-											<li class='exception-item displayed'>
-												<div class='exception-head'>
-													<span class='exception-name'>com.relevantcodes.extentreports.ExtentTestInterruptedException</span>
-												</div>
-												<div class='exception-test-count'>
-													<span class='fail label'>1</span>
-												</div>
-												<div class='exception-body'>
-													<div class='exception-tests'>
-														<table class='bordered'>
-															<thead>
-																<tr>
-																	<th>RunDate</th>
-																	<th>Test Name</th>
-																	<th>Exception</th>
-																</tr>
-															</thead>
-															<tbody>
-                                                                   <tr class='fail'>
-                                                                       <td>2019-12-10 19:34:14</td>
-                                                                       <td><span class='exception-link linked' extentid='20551b53-8435-4b1b-95ae-5614586911d0'>Check for Mandates in Code</span></td>
-                                                                       <td><pre class='exception-message'>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-	at com.relevantcodes.extentreports.Report.terminate(Report.java:425)
-	at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:917)
-	at CM.CodeCheckDev.tearDown(CodeCheckDev.java:299)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-	at org.testng.TestRunner.afterRun(TestRunner.java:725)
-	at org.testng.TestRunner.run(TestRunner.java:509)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
-</pre></td>
-                                                                   </tr>
-                                                            </tbody>
-														</table>
-													</div>
-												</div> 
-											</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id='exception-details-wrapper' class='col _addedCell2'>
-						<div class='contents'>
-							<div class='card-panel details-view'>
-								<h5 class='exception-name'></h5>
-								<div class='exception-container'>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			<!-- /exceptions -->
 			
 			<!-- testrunner logs -->

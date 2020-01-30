@@ -71,7 +71,7 @@ public class Archives {
     @Test
     public void archiveTest() throws Exception {
         driver.get("https://www3.forbes.com/archive-articles/");
-
+        driver.findElement(By.xpath("//div[@class=\"toggle-head\"]")).click();
         try {
            while (true)
            driver.findElement(By.className("show-more-archive")).click();
@@ -111,9 +111,12 @@ public class Archives {
                 DFPCheck(link,DFPTest);
                try{
 
-                   WebElement w = driver.findElement(By.xpath("//span[@class='media-credit']"));
-                   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", w);
-
+                  try {
+                      WebElement w = driver.findElement(By.xpath("//span[@class='media-credit']"));
+                      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", w);
+                  }catch (Exception e){DFPTest.log(LogStatus.FAIL,"No Media credit");
+                  System.out.println(e);
+                  System.out.println("No credits found!!");}
                    Thread.sleep(500);
                    try {
                        driver.findElement(By.xpath("//div[@class='continue']")).click();
@@ -131,8 +134,14 @@ public class Archives {
                }
                catch (Exception e){
                   // System.out.println(e);
+                   ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,300)");
+                   Thread.sleep(3000);
+
                    List<WebElement> medias = driver.findElements(By.className("article-title"));
-                   ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",medias.get(i));
+                  try {
+                      ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", medias.get(i));
+                  }
+                  catch (Exception ex){ System.out.println(e);}
                    ((JavascriptExecutor)driver).executeScript("window.scrollBy(0,300)");
                    Thread.sleep(2000);
                    if(!previous.equalsIgnoreCase(driver.getCurrentUrl())){
@@ -142,7 +151,7 @@ public class Archives {
                    }
                    else
                    try{
-                       System.out.println("Default Vue not found");
+                       System.out.println("Default template VueJS version button not found");
                        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0,document.body.scrollHeight);");
                        Thread.sleep(500);
                        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0,document.body.scrollHeight);");
@@ -165,8 +174,8 @@ public class Archives {
     public void closeTest()throws Exception{
        driver.quit();
         try {
-            if (urls.size() > 0)
-                sendEmail();
+            //if (urls.size() > 0)
+                //sendEmail();
         }
         catch (Exception exception){}
         extent.flush();

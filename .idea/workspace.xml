@@ -5,67 +5,45 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdvisorHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/AdvisorHeader.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AdvisorHomepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/AdvisorHomepage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Archive.html" beforeDir="false" afterPath="$PROJECT_DIR$/Archive.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMCodeTestDev.html" beforeDir="false" afterPath="$PROJECT_DIR$/CMCodeTestDev.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CommonTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/CommonTests.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DailyReport.html" beforeDir="false" afterPath="$PROJECT_DIR$/DailyReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lighthouse.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lighthouse.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorCheckMultiple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorCheckMultiple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorChecks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorChecks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Advisor/AdvisorHeader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Archives.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Archives.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Rough.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Rough.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/quiz-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Advisor.Advisor.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Advisor.Advisor/Command line test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Advisor.Advisor/Command line test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CM Tests/CM - Get Framework.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CM Tests/CM - Get Framework.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CM.CM Tests/CM.CM - Get Framework.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/CM.CM Tests/CM.CM - Get Framework.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CM.CM Tests/CM.CM - Get Framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/CM.CM Tests/CM.CM - Get Framework.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Advisor.Advisor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CM/CodeCheckDev.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CM/CodeCheckDev.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CommonTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CommonTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Lighthouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Lighthouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CM.CM Tests/CM.CM - Get Framework.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CM.CM Tests/CM.CM - Get Framework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/CM.CM Tests/testng-failed.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-Advisor.Advisor.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-Advisor.AdvisorHeader.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-Advisor.AdvisorHeader.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/junitreports/TEST-Rough.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/Command line test.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/classes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/groups.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/methods-alphabetical.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/methods-not-run.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/methods.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/reporter-output.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/testng.xml.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/Advisor.Advisor/toc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/CM - Get Framework.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/classes.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/groups.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/main.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/methods-alphabetical.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/methods-not-run.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/methods.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/reporter-output.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/testng.xml.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM Tests/toc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/methods-alphabetical.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/methods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/toc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/CM.CM - Get Framework.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/classes.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/groups.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/methods-alphabetical.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/methods-not-run.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/methods.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/reporter-output.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/testng.xml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/CM.CM Tests/toc.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorCheckMultiple.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorCheckMultiple.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorChecks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorChecks.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorHeader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorHeader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorHeaderDetailed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Advisor/AdvisorHeaderDetailed.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/Archives.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Archives.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/CM/CodeCheckDev.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CM/CodeCheckDev.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Head.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Head.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Rough.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Rough.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/CommonTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/CommonTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Lighthouse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Lighthouse.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,24 +95,7 @@
       <recent name="Default" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AdvisorHeader">
-    <configuration name="AdvisorCheckMultiple" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="quiz" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Advisor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Advisor" />
-      <option name="MAIN_CLASS_NAME" value="Advisor.AdvisorCheckMultiple" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.Lighthouse">
     <configuration name="AdvisorHeader" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <extension name="coverage">
@@ -152,7 +113,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DefaultMobile" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CodeCheckDev" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CM.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CM" />
+      <option name="MAIN_CLASS_NAME" value="CM.CodeCheckDev" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CommonTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Default.runTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="quiz" />
       <extension name="coverage">
         <pattern>
@@ -161,31 +150,20 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Default" />
-      <option name="MAIN_CLASS_NAME" value="Default.DefaultMobile" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Rough" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="quiz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Rough" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Rough.Rough" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="quiz" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Rough" />
-      <option name="METHOD_NAME" value="Rough" />
+      <option name="MAIN_CLASS_NAME" value="Default.Default" />
+      <option name="METHOD_NAME" value="runTest" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lighthouse" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="quiz" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Lighthouse" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -194,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Lighthouse" />
+        <item itemvalue="TestNG.CodeCheckDev" />
         <item itemvalue="TestNG.AdvisorHeader" />
-        <item itemvalue="TestNG.AdvisorCheckMultiple" />
-        <item itemvalue="TestNG.DefaultMobile" />
-        <item itemvalue="TestNG.Rough" />
-        <item itemvalue="TestNG.Rough.Rough" />
+        <item itemvalue="TestNG.CommonTests" />
+        <item itemvalue="TestNG.Default.runTest" />
       </list>
     </recent_temporary>
   </component>
@@ -287,6 +265,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="363" y="91" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1576585740506" />
+    <state x="-1815" y="111" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1578408062935">
+      <screen x="-2560" y="-370" width="2048" height="1112" />
+    </state>
+    <state x="-1815" y="111" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578408062935" />
     <state x="-1738" y="45" width="403" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1576062818897">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
@@ -299,65 +281,104 @@
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
     <state x="-1801" y="-53" key="EnvironmentVariablesDialog/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577108738711" />
-    <state x="-1755" y="-59" key="FileChooserDialogImpl" timestamp="1577108952612">
+    <state x="-1755" y="-59" key="FileChooserDialogImpl" timestamp="1578384765726">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state x="-1755" y="-59" key="FileChooserDialogImpl/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577108952612" />
-    <state width="2005" height="272" key="GridCell.Tab.0.bottom" timestamp="1577797324640">
+    <state x="-1755" y="-59" key="FileChooserDialogImpl/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578384765726" />
+    <state width="1323" height="275" key="GridCell.Tab.0.bottom" timestamp="1580369801545">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="2005" height="272" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1579085649861" />
+    <state width="2005" height="328" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@-2560.0.2048.1112" timestamp="1579169660304" />
+    <state width="1323" height="158" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@0.0.1366.728" timestamp="1579162260347" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@-1920.-185.1920.1040" timestamp="1580304516655" />
+    <state width="1323" height="275" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@0.0.1366.728" timestamp="1580310436015" />
+    <state width="2005" height="275" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@1366.-348.2048.1112" timestamp="1580290294580" />
+    <state width="1323" height="275" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.2048.1112@0.0.1366.728" timestamp="1580293810377" />
+    <state width="2005" height="275" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.2048.1112@1366.0.2048.1112" timestamp="1580294207858" />
+    <state width="1323" height="275" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580369801545" />
+    <state width="1323" height="275" key="GridCell.Tab.0.center" timestamp="1580369801545">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="2005" height="272" key="GridCell.Tab.0.center/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1579085649860" />
+    <state width="2005" height="328" key="GridCell.Tab.0.center/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@-2560.0.2048.1112" timestamp="1579169660304" />
+    <state width="1323" height="158" key="GridCell.Tab.0.center/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@0.0.1366.728" timestamp="1579162260347" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@-1920.-185.1920.1040" timestamp="1580304516655" />
+    <state width="1323" height="275" key="GridCell.Tab.0.center/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@0.0.1366.728" timestamp="1580310436014" />
+    <state width="2005" height="275" key="GridCell.Tab.0.center/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@1366.-348.2048.1112" timestamp="1580290294580" />
+    <state width="1323" height="275" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.2048.1112@0.0.1366.728" timestamp="1580293810377" />
+    <state width="2005" height="275" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.2048.1112@1366.0.2048.1112" timestamp="1580294207858" />
+    <state width="1323" height="275" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580369801545" />
+    <state width="1323" height="275" key="GridCell.Tab.0.left" timestamp="1580369801544">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="2005" height="272" key="GridCell.Tab.0.left/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1579085649860" />
+    <state width="2005" height="328" key="GridCell.Tab.0.left/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@-2560.0.2048.1112" timestamp="1579169660304" />
+    <state width="1323" height="158" key="GridCell.Tab.0.left/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@0.0.1366.728" timestamp="1579162260346" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@-1920.-185.1920.1040" timestamp="1580304516655" />
+    <state width="1323" height="275" key="GridCell.Tab.0.left/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@0.0.1366.728" timestamp="1580310436014" />
+    <state width="2005" height="275" key="GridCell.Tab.0.left/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@1366.-348.2048.1112" timestamp="1580290294580" />
+    <state width="1323" height="275" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.2048.1112@0.0.1366.728" timestamp="1580293810377" />
+    <state width="2005" height="275" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.2048.1112@1366.0.2048.1112" timestamp="1580294207858" />
+    <state width="1323" height="275" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580369801544" />
+    <state width="1323" height="275" key="GridCell.Tab.0.right" timestamp="1580369801545">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="2005" height="272" key="GridCell.Tab.0.right/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1579085649861" />
+    <state width="2005" height="328" key="GridCell.Tab.0.right/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@-2560.0.2048.1112" timestamp="1579169660304" />
+    <state width="1323" height="158" key="GridCell.Tab.0.right/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@0.0.1366.728" timestamp="1579162260347" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@-1920.-185.1920.1040" timestamp="1580304516655" />
+    <state width="1323" height="275" key="GridCell.Tab.0.right/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@0.0.1366.728" timestamp="1580310436014" />
+    <state width="2005" height="275" key="GridCell.Tab.0.right/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@1366.-348.2048.1112" timestamp="1580290294580" />
+    <state width="1323" height="275" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.2048.1112@0.0.1366.728" timestamp="1580293810377" />
+    <state width="2005" height="275" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.2048.1112@1366.0.2048.1112" timestamp="1580294207858" />
+    <state width="1323" height="275" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580369801545" />
+    <state width="2005" height="623" key="GridCell.Tab.1.bottom" timestamp="1578665113972">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state width="2005" height="272" key="GridCell.Tab.0.bottom/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577797324640" />
-    <state width="1323" height="272" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1577719809525" />
-    <state width="2005" height="272" key="GridCell.Tab.0.center" timestamp="1577797324639">
-      <screen x="-2560" y="-370" width="2048" height="1112" />
-    </state>
-    <state width="2005" height="272" key="GridCell.Tab.0.center/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577797324639" />
-    <state width="1323" height="272" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1577719809525" />
-    <state width="2005" height="272" key="GridCell.Tab.0.left" timestamp="1577797324639">
-      <screen x="-2560" y="-370" width="2048" height="1112" />
-    </state>
-    <state width="2005" height="272" key="GridCell.Tab.0.left/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577797324639" />
-    <state width="1323" height="272" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1577719809525" />
-    <state width="2005" height="272" key="GridCell.Tab.0.right" timestamp="1577797324640">
-      <screen x="-2560" y="-370" width="2048" height="1112" />
-    </state>
-    <state width="2005" height="272" key="GridCell.Tab.0.right/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577797324639" />
-    <state width="1323" height="272" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1577719809525" />
-    <state width="1323" height="376" key="GridCell.Tab.1.bottom" timestamp="1577100850770">
-      <screen x="-2560" y="-370" width="2048" height="1112" />
-    </state>
-    <state width="1323" height="376" key="GridCell.Tab.1.bottom/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577100850770" />
+    <state width="2005" height="623" key="GridCell.Tab.1.bottom/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578665113972" />
     <state width="1323" height="376" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1576769926517" />
-    <state width="1323" height="376" key="GridCell.Tab.1.center" timestamp="1577100850770">
+    <state width="2005" height="623" key="GridCell.Tab.1.center" timestamp="1578665113972">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state width="1323" height="376" key="GridCell.Tab.1.center/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577100850770" />
+    <state width="2005" height="623" key="GridCell.Tab.1.center/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578665113972" />
     <state width="1323" height="376" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1576769926517" />
-    <state width="1323" height="376" key="GridCell.Tab.1.left" timestamp="1577100850770">
+    <state width="2005" height="623" key="GridCell.Tab.1.left" timestamp="1578665113972">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state width="1323" height="376" key="GridCell.Tab.1.left/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577100850770" />
+    <state width="2005" height="623" key="GridCell.Tab.1.left/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578665113972" />
     <state width="1323" height="376" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1576769926517" />
-    <state width="1323" height="376" key="GridCell.Tab.1.right" timestamp="1577100850770">
+    <state width="2005" height="623" key="GridCell.Tab.1.right" timestamp="1578665113972">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state width="1323" height="376" key="GridCell.Tab.1.right/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577100850770" />
+    <state width="2005" height="623" key="GridCell.Tab.1.right/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578665113972" />
     <state width="1323" height="376" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1576769926517" />
     <state x="-2027" y="-172" key="SettingsEditor" timestamp="1577108973748">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
     <state x="-2027" y="-172" key="SettingsEditor/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577108973748" />
-    <state x="-2095" y="-194" key="new project wizard" timestamp="1577097570862">
+    <state x="-1726" y="103" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578908980595">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state x="-2095" y="-194" key="new project wizard/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577097570862" />
-    <state x="-1879" y="74" key="run.anything.popup" timestamp="1577183161432">
+    <state x="-1726" y="103" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578908980595" />
+    <state x="2084" y="-187" width="611" height="789" key="find.popup" timestamp="1579600337306">
+      <screen x="1366" y="-348" width="2048" height="1112" />
+    </state>
+    <state x="2084" y="-187" width="611" height="789" key="find.popup/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@1366.-348.2048.1112" timestamp="1579600337306" />
+    <state x="-2095" y="-194" key="new project wizard" timestamp="1578492877207">
       <screen x="-2560" y="-370" width="2048" height="1112" />
     </state>
-    <state x="-1879" y="74" key="run.anything.popup/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1577183161432" />
-    <state x="-1657" y="-15" width="672" height="678" key="search.everywhere.popup" timestamp="1576835038979">
-      <screen x="-2560" y="-370" width="2048" height="1112" />
+    <state x="-2095" y="-194" key="new project wizard/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578492877207" />
+    <state x="-1879" y="444" key="run.anything.popup" timestamp="1579168077680">
+      <screen x="-2560" y="0" width="2048" height="1112" />
     </state>
-    <state x="-1657" y="-15" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1576835038979" />
+    <state x="-1879" y="74" key="run.anything.popup/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578578348384" />
+    <state x="-1879" y="444" key="run.anything.popup/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@-2560.0.2048.1112" timestamp="1579168077680" />
+    <state x="-1073" y="147" width="630" height="635" key="search.everywhere.popup" timestamp="1580304898485">
+      <screen x="-1920" y="-185" width="1920" height="1040" />
+    </state>
+    <state x="-1657" y="-15" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-2560.-370.2048.1112@-2560.-370.2048.1112" timestamp="1578899393563" />
+    <state x="-1657" y="355" width="672" height="678" key="search.everywhere.popup/0.0.1366.728/-2560.0.2048.1112/1366.0.1280.984@-2560.0.2048.1112" timestamp="1579168411468" />
+    <state x="-1073" y="147" width="630" height="635" key="search.everywhere.popup/0.0.1366.728/1366.-348.2048.1112/-1920.-185.1920.1040@-1920.-185.1920.1040" timestamp="1580304898485" />
   </component>
 </project>

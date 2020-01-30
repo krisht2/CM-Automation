@@ -61,7 +61,7 @@ public class Lighthouse {
     @Test(invocationCount = 2)
     public void lightHouse() throws Exception{
         Set<String> list = new HashSet<>();
-        File file = new File("C:\\Users\\krish.t\\Desktop\\quiz\\resources\\LighthouseURLs.txt");
+        File file = new File("C:\\Users\\krish.t\\Desktop\\quiz\\resources\\AdHoc.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String s;
         while ((s =br.readLine()) != null)

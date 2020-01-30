@@ -128,7 +128,10 @@ public class AdvisorCheckMultiple {
                }
                System.out.println(count);
                extent.endTest(imageTest);
-           }catch (Exception e){imageTest.log(LogStatus.FAIL,"Error in Selenium Script : </br>"+e); extent.endTest(imageTest);}
+           }catch (Exception e){
+           imageTest.log(LogStatus.FAIL,"Error in Selenium Script : </br>"+e);
+           System.out.println(e);
+           extent.endTest(imageTest);}
    }
 
     @Test(invocationCount = 7,priority=-1)
@@ -152,6 +155,7 @@ public class AdvisorCheckMultiple {
                 if (ck.getName().equalsIgnoreCase("fadve2etid"))
                     tid3 = ck.getValue();
             System.out.println("Cookie value of \'fadve2etid\' = " + tid3);
+            pdpTest.log(LogStatus.INFO,"Cookie value of \'fadve2etid\' = " + tid3);;
             if (topten) {
                 List<WebElement> l1 = driver.findElements(By.className("image__box-widget"));
                 //System.out.println("Size = "+l1.size());
@@ -159,6 +163,7 @@ public class AdvisorCheckMultiple {
                 //System.out.println("Size = "+l2.size());
                 List<WebElement> cards = driver.findElements(By.className("loan-card-wrapper"));
                 System.out.println("Total cards =" + cards.size());
+                pdpTest.log(LogStatus.INFO,"Total cards =" + cards.size());;
                 if (cards.size() == 0 && (url.contains("review") || url.contains("details"))) {
                     String applyNow = "";
                     try {
@@ -181,9 +186,12 @@ public class AdvisorCheckMultiple {
 
                     if (tid1.equals(tid2) && tid1.equals(tid3)) {
                         System.out.println("TID Consistent");
-                    } else
+                        pdpTest.log(LogStatus.PASS,"TID Consistent"+ tid3);
+                    } else {
                         System.out.println("COOKIE ERROR!!!!!!" + tid3);
-                    extent.endTest(pdpTest);
+                       pdpTest.log(LogStatus.FAIL,"COOKIE ERROR! : TID=" + tid3);
+                    }
+                        extent.endTest(pdpTest);
                 }
                 if (l1.size() == l2.size() && l1.size() == cards.size())
                     for (int i = 0; i < l1.size(); i++) {
@@ -203,16 +211,28 @@ public class AdvisorCheckMultiple {
                         else
                             cardType = "Non Affiliate Card";
                         if (tid2.equals(tid1))
-                            if (tid2.equals(tid3))
+                            if (tid2.equals(tid3)) {
                                 System.out.println("TID matches in Cards and Cookies \nCard tid = " + tid1 + "\nApplynow tid = " + tid2 + "\nType of card = " + cardType + "\nURL =" + applynow + "\n\n");
-                            else
+                                pdpTest.log(LogStatus.PASS,"TID matches in Cards and Cookies \nCard tid = " + tid1 + "\nApplynow tid = " + tid2 + "\nType of card = " + cardType + "\nURL =" + applynow + "\n\n");
+
+                            }
+                            else {
                                 System.out.println("TID different from cookies \nCard tid = " + tid1 + "\nApplynow tid = " + tid2 + "\nType of card = " + cardType + "\nURL =" + applynow + "\n\n");
-                        else
+                                pdpTest.log(LogStatus.FAIL,"TID different from cookies \nCard tid = " + tid1 + "\nApplynow tid = " + tid2 + "\nType of card = " + cardType + "\nURL =" + applynow + "\n\n");
+
+                            }
+                            else {
                             System.out.println("TID Error \nCard tid = " + tid1 + "\nApplynow tid = " + tid2 + "\nType of card =  \n\n");
-                    }
-                else
-                    System.out.println("Some error in Matching the size of cards and links!!!");
-            } else {
+                            pdpTest.log(LogStatus.FAIL,"TID Error \nCard tid = " + tid1 + "\nApplynow tid = " + tid2 + "\nType of card =  \n\n");
+
+                            }
+                        }
+                else {
+                    System.out.println("ERROR in Matching the size of cards and links!!!");
+                    pdpTest.log(LogStatus.FAIL,"ERROR in Matching the size of cards and links!!!");
+                }
+            }
+            else {
                 String applyNow = "";
                 try {
                     applyNow = driver.findElement(By.className("cc-apply-now")).findElement(By.tagName("a")).getAttribute("href");
@@ -234,13 +254,18 @@ public class AdvisorCheckMultiple {
 
                 if (tid1.equals(tid2) && tid1.equals(tid3)) {
                     System.out.println("TID Consistent");
-                } else
+                    pdpTest.log(LogStatus.PASS,"TID Consistent");
+                } else {
                     System.out.println("COOKIE ERROR!!!!!!" + tid3);
+                    pdpTest.log(LogStatus.FAIL, "COOKIE ERROR!!!!!!" + tid3);
+                }
                 extent.endTest(pdpTest);
 
             }
             extent.endTest(pdpTest);
-        }catch (Exception e){pdpTest.log(LogStatus.FAIL,"Error in Selenium Script: </br>"+e);extent.endTest(pdpTest);}
+        }catch (Exception e){
+        System.out.println(e);
+        pdpTest.log(LogStatus.FAIL,"Error in Selenium Script: </br>"+e);extent.endTest(pdpTest);}
 
     }
     @Test(invocationCount = 7)
